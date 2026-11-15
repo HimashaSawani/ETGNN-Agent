@@ -1,0 +1,6 @@
+{
+  "model": "etgnn",
+  "seed": 42,
+  "best_epoch": 40,
+  "validation_auprc": 0.5487728712276526
+}

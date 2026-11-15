@@ -1,0 +1,7 @@
+model_id,contrast,treat_available,ctrl_available,matched_pairs,hopcroft_karp_max_card,unique_treat_nodes,unique_ctrl_nodes,caliper_margin_max_diff,caliper_edges_max_diff,total_degree_identity_passed
+ETGNN_full,TP_FP,250,99,95,95,95,95,0.047,2,True
+ETGNN_full,TN_FN,26,1312,25,25,25,25,0.0074,1,True
+Matched_GAT,TP_FP,486,104,94,94,94,94,0.05,3,True
+Matched_GAT,TN_FN,21,1076,21,21,21,21,0.003,1,True
+ETGNN_local,TP_FP,177,100,92,92,92,92,0.0499,4,True
+ETGNN_local,TN_FN,25,1385,25,25,25,25,0.0087,4,True

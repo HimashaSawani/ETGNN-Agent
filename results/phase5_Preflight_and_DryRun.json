@@ -1,0 +1,220 @@
+{
+  "preflight": {
+    "stage": "Stage_2_Resource_Preflight",
+    "timestamp": 1793082310.7134943,
+    "total_ram_gb": 7.65,
+    "available_ram_mb": 495.1,
+    "current_process_rss_mb": 405.9,
+    "free_disk_gb": 32.62,
+    "cpu_physical_cores": 4,
+    "cpu_logical_cores": 8,
+    "recommended_torch_threads": 2,
+    "ram_safe_for_stage_windowed_training": false,
+    "disk_safe_for_external_dataset": true,
+    "external_dataset_present_locally": false,
+    "external_dataset_path": "D:\\ETGNN-Fraud-Detection\\data\\external\\elliptic_plusplus"
+  },
+  "dry_run": {
+    "stage": "Stage_1_Synthetic_Dry_Run",
+    "status": "PASS",
+    "pipeline_manifest": {
+      "dataset": "Elliptic++ Actors",
+      "processed_at_epoch": 1793082309.747691,
+      "processing_wall_time_sec": 0.17,
+      "feature_dim": 56,
+      "total_observations": 560,
+      "unique_addresses": 271,
+      "total_intra_step_edges": 553,
+      "data_hygiene": {
+        "duplicate_observations_dropped": 0,
+        "raw_nonfinite_values_imputed": 0,
+        "self_loops_removed": 7,
+        "duplicate_edges_removed": 7,
+        "unmapped_edges_skipped": 0
+      },
+      "entity_overlap": {
+        "train_unique_actors": 183,
+        "val_unique_actors": 136,
+        "test_unique_actors": 149,
+        "val_actors_seen_in_train": 86,
+        "test_actors_seen_in_train": 89
+      },
+      "scaler_verification": {
+        "fitted_solely_on_train_steps": [
+          1,
+          32
+        ],
+        "n_samples_seen": 240,
+        "scaler_sha256": "7031d703ecd58f3b505fc8b78e92563b816f11dcd6bd24644d7644f1f0cc0ae5"
+      },
+      "raw_checksums": {
+        "wallets_features.csv": "658556f919aa1899e9863d4fc8e12992af750b7b084914aeb9721772cc5e0784",
+        "wallets_classes.csv": "799289098543f93976dde462bdc8111b41bce9461a472687ac668aef2656f38e",
+        "AddrAddr_edgelist.csv": "47b0271d57a2fd3f127360717ae029064a8b3ddfebe89d02b34e54dac87f9421"
+      },
+      "stages": {
+        "train": {
+          "time_steps": [
+            1,
+            32
+          ],
+          "total_nodes": 240,
+          "total_edges": 237,
+          "labelled_nodes": 202,
+          "unseen_labelled_nodes": 0,
+          "licit_count": 157,
+          "illicit_count": 45,
+          "illicit_prevalence": 0.222772,
+          "artifact_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\processed_synthetic\\train_graph.pt",
+          "sha256": "ebb722672d792ce7548079f6e35da5b440a941b12d9689c53bddf5b2a3bd28f0"
+        },
+        "validation": {
+          "time_steps": [
+            33,
+            40
+          ],
+          "total_nodes": 160,
+          "total_edges": 158,
+          "labelled_nodes": 134,
+          "unseen_labelled_nodes": 48,
+          "licit_count": 99,
+          "illicit_count": 35,
+          "illicit_prevalence": 0.261194,
+          "artifact_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\processed_synthetic\\validation_graph.pt",
+          "sha256": "d4e240bf8b6f62f90c3fc3983a8f77cf7ac8317f1da866f2edab5985d6e2dbdc"
+        },
+        "test": {
+          "time_steps": [
+            41,
+            49
+          ],
+          "total_nodes": 160,
+          "total_edges": 158,
+          "labelled_nodes": 137,
+          "unseen_labelled_nodes": 53,
+          "licit_count": 108,
+          "illicit_count": 29,
+          "illicit_prevalence": 0.211679,
+          "artifact_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\processed_synthetic\\test_graph.pt",
+          "sha256": "4019ce395c2e8317b83a1dfbe849c6c669fb640bfe2eedcf048f7ca87d7f22f8"
+        }
+      }
+    },
+    "trials": {
+      "A": {
+        "auprc": 1.0,
+        "roc_auc": 1.0,
+        "f1": 0.958904109589041,
+        "val_calibrated_f1": 1.0,
+        "calibrated_threshold": 0.7253786325454712,
+        "precision": 0.9210526315789473,
+        "recall": 1.0,
+        "tp": 35,
+        "fp": 3,
+        "tn": 96,
+        "fn": 0,
+        "run_id": "P5-Cond_A_56f_s42",
+        "condition": "A",
+        "feat_dim": 56,
+        "seed": 42,
+        "param_count": 17730,
+        "best_epoch": 1,
+        "total_epochs": 4,
+        "wall_time_sec": 0.111,
+        "inference_latency_ms": 0.548,
+        "peak_ram_mb": 403.9,
+        "checkpoint_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\checkpoints_synthetic\\P5-Cond_A_56f_s42.pt",
+        "rewire_attempts": 0,
+        "rewire_accepted": 0,
+        "rewire_jaccard": 0.0
+      },
+      "B": {
+        "auprc": 1.0,
+        "roc_auc": 1.0,
+        "f1": 0.8045977011494253,
+        "val_calibrated_f1": 1.0,
+        "calibrated_threshold": 0.990877091884613,
+        "precision": 0.6730769230769231,
+        "recall": 1.0,
+        "tp": 35,
+        "fp": 17,
+        "tn": 82,
+        "fn": 0,
+        "run_id": "P5-Cond_B_56f_s42",
+        "condition": "B",
+        "feat_dim": 56,
+        "seed": 42,
+        "param_count": 9736,
+        "best_epoch": 3,
+        "total_epochs": 6,
+        "wall_time_sec": 0.143,
+        "inference_latency_ms": 3.113,
+        "peak_ram_mb": 405.7,
+        "checkpoint_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\checkpoints_synthetic\\P5-Cond_B_56f_s42.pt",
+        "rewire_attempts": 0,
+        "rewire_accepted": 0,
+        "rewire_jaccard": 0.0
+      },
+      "C": {
+        "auprc": 1.0,
+        "roc_auc": 1.0,
+        "f1": 1.0,
+        "val_calibrated_f1": 1.0,
+        "calibrated_threshold": 0.9998630285263062,
+        "precision": 1.0,
+        "recall": 1.0,
+        "tp": 35,
+        "fp": 0,
+        "tn": 99,
+        "fn": 0,
+        "run_id": "P5-Cond_C_56f_s42",
+        "condition": "C",
+        "feat_dim": 56,
+        "seed": 42,
+        "param_count": 9736,
+        "best_epoch": 1,
+        "total_epochs": 4,
+        "wall_time_sec": 0.059,
+        "inference_latency_ms": 5.466,
+        "peak_ram_mb": 405.7,
+        "checkpoint_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\checkpoints_synthetic\\P5-Cond_C_56f_s42.pt",
+        "rewire_attempts": 0,
+        "rewire_accepted": 0,
+        "rewire_jaccard": 0.0
+      },
+      "D": {
+        "auprc": 1.0,
+        "roc_auc": 1.0,
+        "f1": 0.7608695652173914,
+        "val_calibrated_f1": 1.0,
+        "calibrated_threshold": 0.9667714238166809,
+        "precision": 0.6140350877192983,
+        "recall": 1.0,
+        "tp": 35,
+        "fp": 22,
+        "tn": 77,
+        "fn": 0,
+        "run_id": "P5-Cond_D_56f_s42",
+        "condition": "D",
+        "feat_dim": 56,
+        "seed": 42,
+        "param_count": 9736,
+        "best_epoch": 2,
+        "total_epochs": 5,
+        "wall_time_sec": 0.25,
+        "inference_latency_ms": 2.577,
+        "peak_ram_mb": 405.9,
+        "checkpoint_path": "C:\\Users\\himas\\AppData\\Local\\Temp\\tmp2k26xrds\\checkpoints_synthetic\\P5-Cond_D_56f_s42.pt",
+        "rewire_attempts": 1975,
+        "rewire_accepted": 1917,
+        "rewire_jaccard": 0.006369426751592357
+      }
+    }
+  },
+  "frozen_hashes": {
+    "data/processed/train_graph.pt": "2f77f1e0d94c4aa81e21293c089a9a2df7d9cd099db5f4669213cce0f92e8fc4",
+    "data/processed/validation_graph.pt": "261b7ee5951d386bee9843adfc2471726ec9f433341d7c4359c7f66e44cbfc71",
+    "results/checkpoints/etgnn.pt": "b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc",
+    "research_extension/PHASE4_EXPERIMENT_MATRIX.csv": "1576d3cb64b907cfde1f3d3885de22f0e184c48fa831dfddd3e6ea30aed75172"
+  }
+}

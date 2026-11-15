@@ -1,0 +1,26 @@
+{
+  "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "torch_version": "2.14.0+cpu",
+  "torch_geometric_version": "2.8.0.post1",
+  "checkpoint_path": "results/checkpoints/etgnn_local.pt",
+  "checkpoint_sha256": "2904d54881a9ee2d0d3d6cea26e1ef717b60bac3ab661f4d3c7a116ac60f9082",
+  "checkpoint_size_bytes": 32901,
+  "val_graph_path": "data/processed/validation_graph.pt",
+  "val_graph_sha256": "261b7ee5951d386bee9843adfc2471726ec9f433341d7c4359c7f66e44cbfc71",
+  "val_graph_size_bytes": 114002507,
+  "budget_fraction": 0.25,
+  "budget_rounding": "ceil",
+  "explainer_seeds": [
+    42,
+    43,
+    44
+  ],
+  "random_subsets_count": 30,
+  "random_seed_base": 20261019,
+  "time_steps_range": [
+    33,
+    40
+  ],
+  "model_architecture": "ETGNNClassifier(input_dim=93, time_dim=16, hidden_dim=64, dropout=0.3)",
+  "total_runtime_seconds": 105.23322239999834
+}

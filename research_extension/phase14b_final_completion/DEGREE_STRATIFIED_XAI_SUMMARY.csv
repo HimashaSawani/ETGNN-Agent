@@ -1,0 +1,5 @@
+,,top_edge_necessity_drop,top_edge_necessity_drop,feat_necessity_drop,cf_flipped
+,,mean,count,mean,mean
+cohort,in_degree,,,,
+FP,1,0.009328641132874921,275,0.12598782658576965,0.12
+TP,1,-0.006003105423667214,275,0.12367273829200051,0.04363636363636364

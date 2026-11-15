@@ -1,0 +1,5 @@
+model_id,transaction_id,node_index,time_step,recorded_label,predicted_class,prediction_category,p_illicit,frozen_threshold,margin,candidate_edge_count,in_degree,out_degree,total_degree,eligibility,exclusion_reason,historical_pilot_flag
+ETGNN_full,93564753,131350,33,1,1,TP,0.8514072895050049,0.5,0.3514072895050049,2,1,0,1,False,dev_period_step_33_36,False
+ETGNN_full,92512070,130659,33,0,1,FP,0.7325847148895264,0.5,0.2325847148895263,118,65,2,67,False,dev_period_step_33_36,False
+ETGNN_full,288474786,134593,34,1,0,FN,0.4482207298278808,0.5,0.0517792701721191,2,1,0,1,False,dev_period_step_33_36,False
+ETGNN_full,92724813,130674,33,0,0,TN,0.1324922293424606,0.5,0.3675077706575393,6,5,1,6,False,dev_period_step_33_36,False

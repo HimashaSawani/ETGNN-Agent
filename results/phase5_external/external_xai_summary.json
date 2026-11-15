@@ -1,0 +1,49 @@
+{
+  "dataset": "Elliptic++ Actors (56f, validation_graph.pt)",
+  "model": "ResidualETGNNClassifier (Condition B, seeds 42..46)",
+  "n_evaluated_nodes": 25,
+  "n_stability_nodes": 12,
+  "mean_candidate_edges": 13.48,
+  "ego_residual_empty_subgraph_bound": {
+    "mean_abs_dp": 0.190377,
+    "max_abs_dp": 0.793003
+  },
+  "fidelity_abs_dp": {
+    "loo_top1_mean": 0.217731,
+    "loo_top2_mean": 0.110413,
+    "loo_top3_mean": 0.064265,
+    "gnnexp_top1_mean": 0.080746,
+    "gnnexp_top2_mean": 0.067519,
+    "gnnexp_top3_mean": 0.097489,
+    "gnnexp_bot1_mean": 0.088691,
+    "rand_top1_mean": 0.09322,
+    "rand_top2_mean": 0.097912,
+    "rand_top3_mean": 0.096502
+  },
+  "hypothesis_tests": {
+    "loo_top1_vs_rand1": {
+      "t_stat": 3.3139,
+      "p_value": 0.002911
+    },
+    "gnnexp_top1_vs_rand1": {
+      "t_stat": -0.7285,
+      "p_value": 0.473358
+    },
+    "gnnexp_top1_vs_bot1": {
+      "t_stat": -0.2901,
+      "p_value": 0.774265
+    }
+  },
+  "sparsity_and_latency": {
+    "gnnexp_entropy_mean": 0.9551,
+    "gnnexp_gini_mean": 0.2088,
+    "loo_latency_ms_mean": 29.64,
+    "gnnexp_latency_ms_mean": 436.32
+  },
+  "stability": {
+    "intra_model_spearman_mean": -0.0756,
+    "intra_model_top2_jaccard_mean": 0.1806,
+    "inter_model_spearman_mean": 0.9794,
+    "inter_model_top2_jaccard_mean": 1.0
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "precision": 0.4036326942482341,
+  "recall": 0.6462035541195477,
+  "f1": 0.4968944099378882,
+  "roc_auc": 0.8897675862864104,
+  "auprc": 0.5657613539646369,
+  "tp": 400,
+  "fp": 591,
+  "tn": 6443,
+  "fn": 219,
+  "run_id": "T1-05_165f_bidir_sqrt_s43",
+  "seed": 43,
+  "model_type": "etgnn",
+  "feat_dim": 165,
+  "connectivity": "bidirectional",
+  "weight_mode": "sqrt",
+  "weight_pos": 2.7397396564483643,
+  "best_epoch": 25,
+  "total_epochs": 33,
+  "wall_time_sec": 41.63,
+  "peak_ram_mb": 574.8,
+  "checkpoint_path": "D:\\ETGNN-Fraud-Detection\\results\\optimization_experiments\\checkpoints\\T1-05_165f_bidir_sqrt_s43.pt"
+}

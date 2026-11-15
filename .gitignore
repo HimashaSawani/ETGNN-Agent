@@ -1,0 +1,43 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+google_drive_staging/
+backup_git_push_fix/
+scratch/
+*.log
+
+# Environment & Secrets
+.env
+.env.local
+
+# Data & Database Artifacts
+data/raw/
+data/processed/
+data/processed/*.pt
+data/processed/*.npy
+data/processed/*.npz
+data/external/
+data/processed_external/
+data/analyst_feedback.db
+*.db
+*.sqlite
+*.sqlite3
+
+# Model Checkpoints & Large Artifacts
+results/checkpoints/
+results/explanations/*
+!results/explanations/connected_*.json
+!results/explanations/connected_validation_cases.csv
+
+# Frontend & Playwright Test Artifacts
+web/frontend/node_modules/
+web/frontend/test-results/
+web/frontend/playwright-report/
+
+# Excluded legacy archives & thesis drafts
+archive/legacy_bundles/
+archive/thesis_drafts/
+*.zip
+*.docx

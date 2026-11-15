@@ -1,0 +1,99 @@
+{
+  "manifest_version": "1.0.0",
+  "created_at": "2026-11-11T09:50:00Z",
+  "system": "ETGNN-Agent Phase 5 Baseline Manifest",
+  "scientific_inventory": {
+    "checkpoints": {
+      "etgnn.pt": {
+        "path": "results/checkpoints/etgnn.pt",
+        "sha256": "b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "etgnn_local.pt": {
+        "path": "results/checkpoints/etgnn_local.pt",
+        "sha256": "2904d54881a9ee2d0d3d6cea26e1ef717b60bac3ab661f4d3c7a116ac60f9082",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "etgnn_local_no_edges.pt": {
+        "path": "results/checkpoints/etgnn_local_no_edges.pt",
+        "sha256": "cba8abf988d6caa1afed2612c6219a20e62df6e477639313a8e393e98d7af6db",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "matched_gat.pt": {
+        "path": "results/checkpoints/matched_gat.pt",
+        "sha256": "1e9b43ea1cc25a26dd8bbe953c49a8782a0d9c27b5e0da17afe726fd21405074",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "gat.pt": {
+        "path": "results/checkpoints/gat.pt",
+        "sha256": "6b6b9e06353d35743d2ae93ad0465b115716950e0666ebb105fbe73fbe6a4901",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "gcn.pt": {
+        "path": "results/checkpoints/gcn.pt",
+        "sha256": "517f9102c28f44b0a18bcb349b6bb547948c5d71ed7a194f655d85ca81d3706d",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "graphsage.pt": {
+        "path": "results/checkpoints/graphsage.pt",
+        "sha256": "040b5ea29334f93afbaf0265b52bf106a70db959d163930ebd81d1f9ad25f5ca",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "random_forest.joblib": {
+        "path": "results/checkpoints/random_forest.joblib",
+        "sha256": "81cb2eea545694e0be87c1c96338c70e908be6d97d4b49547443005338eef730",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "rf_local.joblib": {
+        "path": "results/checkpoints/rf_local.joblib",
+        "sha256": "12043a345a9d2862296be83cf66628a2f4d62a2e98358c55e9ce1d57b9e13744",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "rf_with_time.joblib": {
+        "path": "results/checkpoints/rf_with_time.joblib",
+        "sha256": "ded92f6ae1e0b05349364b0232e50dd11249462c329c2ec0a5c1b15e5837ebbf",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "xgboost.json": {
+        "path": "results/checkpoints/xgboost.json",
+        "sha256": "9cd5508970db433b69f92b1b5b2fb2d2711545acddca5ce4d8ab7ba957796ccb",
+        "status": "IMMUTABLE_READ_ONLY"
+      }
+    },
+    "datasets": {
+      "elliptic_txs_classes.csv": {
+        "path": "data/raw/elliptic/elliptic_txs_classes.csv",
+        "sha256": "93e2e7b2405c735ba752bf6ba06b947561deddd1f5a8fc91e46f6a4c0e439493",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "elliptic_txs_edgelist.csv": {
+        "path": "data/raw/elliptic/elliptic_txs_edgelist.csv",
+        "sha256": "a35053ba68a98e4382cae2ba65b9d9e36b23b6439e02dff084971b1b72a5156e",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "elliptic_txs_features.csv": {
+        "path": "data/raw/elliptic/elliptic_txs_features.csv",
+        "sha256": "fd7f83573443c9e302e371d3f110e3b6224160f5d1ed8a287757936127800ff0",
+        "status": "IMMUTABLE_READ_ONLY"
+      },
+      "nodes_with_masks.csv": {
+        "path": "data/processed/nodes_with_masks.csv",
+        "sha256": "ee6832a5aa57f2032cf32f9f66350a83001ed4d1b2792000624edae9c6d1643d",
+        "status": "VERIFIED_SPLIT"
+      }
+    },
+    "benchmark_tables": {
+      "final_test_results.csv": {
+        "path": "results/tables/final_test_results.csv",
+        "sha256": "f7f3c8e1f911aa13b5a5e6c0f7b0846c870c51c27ca8a1513692d0b02a7d40bc",
+        "status": "REFERENCE_BENCHMARK"
+      }
+    }
+  },
+  "scientific_disclosures": {
+    "test_set_exposure": "Original test snapshots 41-49 were examined during earlier thesis decisions (exploratory data analysis, threshold tuning, and error analysis) and must not be portrayed as an untouched unseen test set in continual learning research.",
+    "snapshot_43_anomaly": "Snapshot 43 structural divergence reflects network-level reorganization. External Darknet market takedown hypotheses remain non-causal observational context and are not proven causal drivers.",
+    "aggregated_feature_provenance": "Elliptic aggregated features (feat_93 to feat_164) have unknown point-in-time provenance within the snapshot 2-week window (Weber et al. 2019) and cannot be claimed as guaranteed leakage-free.",
+    "unknown_labels": "Transactions marked as unknown class (label 2) represent unlabelled nodes and must NEVER be treated as licit (class 0)."
+  }
+}

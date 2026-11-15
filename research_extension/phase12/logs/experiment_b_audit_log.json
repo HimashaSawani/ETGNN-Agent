@@ -1,0 +1,11 @@
+{
+  "experiment": "Experiment B \u2014 Explanation-Guided Error Mitigation",
+  "status": "COMPLETED",
+  "wall_time_sec": 304.01,
+  "peak_rss_mb": 96.09,
+  "val_selected_tau": 0.69,
+  "val_selected_selfloop_delta": 0.2,
+  "val_selected_blend_alpha": 0.75,
+  "n_val_evaluated": 7653,
+  "n_test_evaluated": 9973
+}

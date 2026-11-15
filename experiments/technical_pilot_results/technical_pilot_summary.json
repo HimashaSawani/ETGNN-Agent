@@ -1,0 +1,61 @@
+{
+  "device": "cpu",
+  "cuda_available": false,
+  "gpu_name": "N/A",
+  "benchmark_nodes_count": 4,
+  "runner_sha256": "65ee2e741c8452a87536634f8db2d3678f992309ba3654b4b382b54c08044b29",
+  "dependency_versions": {
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "torch": "2.14.0+cpu",
+    "torch_geometric": "2.8.0.post1",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "psutil": "7.2.2"
+  },
+  "mean_gnnexplainer_time_sec_per_seed_etgnn": 0.312,
+  "mean_gnnexplainer_time_sec_per_seed_gat": 0.253,
+  "mean_extract_time_ms": 20.74,
+  "mean_random_30_time_ms": 111.29,
+  "mean_occlusion_time_ms": 60.49,
+  "max_peak_rss_mb": 625.74,
+  "max_peak_vram_mb": 0.0,
+  "node_134593_distinction": {
+    "node_index": 134593,
+    "etgnn_probabilities": {
+      "p_class_0": 0.5517792701721191,
+      "p_illicit": 0.44822072982788086,
+      "predicted_class": 0
+    },
+    "matched_gat_probabilities": {
+      "p_class_0": 0.4281851053237915,
+      "p_illicit": 0.5718148946762085,
+      "predicted_class": 1
+    },
+    "c1_target_class": 0,
+    "c2_target_gat": 1,
+    "common_target_gat_advantage": 0.15970425,
+    "own_target_advantage_on_etgnn_ranking": -0.15970425,
+    "own_target_advantage_on_gat_own_ranking": -0.06576057,
+    "colab_gpu_pilot_v1_reference": {
+      "common_target_gat_advantage": 0.06576057,
+      "own_target_advantage_on_same_interventions": -0.06576057
+    }
+  },
+  "graph_time_step_ranges": {
+    "all_nodes_in_validation_graph": {
+      "total_nodes": 161603,
+      "time_step_min": 1,
+      "time_step_max": 40,
+      "description": "Entire 2-hop snapshot containing historical transactions (steps 1-32) plus validation transactions (steps 33-40)."
+    },
+    "val_mask_nodes": {
+      "total_nodes": 7653,
+      "time_step_min": 33,
+      "time_step_max": 40,
+      "description": "Labelled evaluation universe restricted strictly to validation time steps 33-40."
+    },
+    "historical_test_period_disclosure": "Test time steps 41-49 are completely absent from validation_graph.pt. The test period was previously inspected in a one-time held-out evaluation on 2026-09-25. No test data is touched or re-evaluated."
+  },
+  "notes": "Technical pilot benchmark executed on 4 development period nodes (steps 33-36). Contains explicit C1 common-target and C2 own-ranking branches."
+}

@@ -1,0 +1,5 @@
+Stratum,Nodes_Count,Pct_Population,Total_Trials,Mean_E_cand,Nominal_Fraction,Actual_Mean_Fraction,Budget_Inflation_Ratio,GNNExplainer_Mean_Drop,Random_Mean_Drop,Degree_Mean_Drop,Occlusion_Mean_Drop,GNNExplainer_Advantage,Advantage_SE,Advantage_95_CI_Low,Advantage_95_CI_High,Advantage_Significant_05
+E_cand = 2,317,84.08,33285,2.0,0.25,0.5,2.0,0.0202,0.0034,0.0125,0.048,0.0171,0.0029,0.0115,0.0227,Yes
+E_cand = 3,26,6.9,2730,3.0,0.25,0.3333,1.33,0.0185,-0.0013,0.0051,0.052,0.0223,0.0091,0.0045,0.0401,Yes
+E_cand = 4,18,4.77,1890,4.0,0.25,0.25,1.0,0.017,-0.0025,-0.0083,0.0472,0.019,0.0107,-0.002,0.04,No
+E_cand >= 5,16,4.24,1680,5.62,0.25,0.3631,1.45,0.0298,0.0062,0.0179,0.0838,0.0266,0.0113,0.0044,0.0488,Yes

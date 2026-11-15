@@ -1,0 +1,7 @@
+Model_Family,Local_93f_AUPRC,Full_165f_AUPRC,AUPRC_Gain_From_Aggregates,Local_93f_F1,Full_165f_F1,F1_Gain_From_Aggregates,Local_93f_ROCAUC,Full_165f_ROCAUC,Precomputed_Aggregates_Help,Provenance_Status
+Random Forest,0.6298,0.6322,+0.0024,0.5736,0.6319,+0.0583,0.8515,0.8735,Yes,Verified (Both Local 93f & Full 165f Checkpoints Exist)
+Logistic Regression,0.2511,0.1897,-0.0614,0.2312,0.2606,+0.0294,0.8414,0.8219,No,Verified (Both Local 93f & Full 165f Checkpoints Exist)
+MLP (Matched),0.4651,0.3594,-0.1057,0.3885,0.2066,-0.1819,0.8028,0.8206,No,Verified (Both Local 93f & Full 165f Checkpoints Exist)
+ETGNN (GNN),0.2334,0.2238,-0.0096,0.3132,0.3308,+0.0176,0.7894,0.8062,No,Verified (Both Local 93f & Full 165f Checkpoints Exist)
+XGBoost,MISSING,0.5857,N/A (Missing Local 93f),MISSING,0.3849,N/A (Missing Local 93f),MISSING,0.8074,Unverified (No Local 93f Checkpoint),Incomplete in Original Repository (Local 93f Not Trained per Scope Correction #4)
+Matched GAT (0-Time),MISSING,0.2087,N/A (Missing Local 93f),MISSING,0.2074,N/A (Missing Local 93f),MISSING,0.8175,Unverified (No Local 93f Checkpoint),Incomplete in Original Repository (Local 93f Not Trained per Scope Correction #4)

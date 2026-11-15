@@ -1,0 +1,23 @@
+{
+  "precision": 0.3146603098927294,
+  "recall": 0.8529886914378029,
+  "f1": 0.45973008271658683,
+  "roc_auc": 0.9337138376581229,
+  "auprc": 0.7215382550992824,
+  "tp": 528,
+  "fp": 1150,
+  "tn": 5884,
+  "fn": 91,
+  "run_id": "T1-14_165f_mlp_sqrt_s42",
+  "seed": 42,
+  "model_type": "mlp",
+  "feat_dim": 165,
+  "connectivity": "empty",
+  "weight_mode": "sqrt",
+  "weight_pos": 2.7397396564483643,
+  "best_epoch": 10,
+  "total_epochs": 18,
+  "wall_time_sec": 9.99,
+  "peak_ram_mb": 434.7,
+  "checkpoint_path": "D:\\ETGNN-Fraud-Detection\\results\\optimization_experiments\\checkpoints\\T1-14_165f_mlp_sqrt_s42.pt"
+}

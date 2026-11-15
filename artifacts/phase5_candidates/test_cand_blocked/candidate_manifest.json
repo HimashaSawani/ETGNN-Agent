@@ -1,0 +1,36 @@
+{
+  "candidate_id": "test_cand_blocked",
+  "base_model_name": "ETGNN",
+  "target_architecture": "ETGNN_continual_v1",
+  "status": "BLOCKED",
+  "artifact_directory": "artifacts\\phase5_candidates\\test_cand_blocked",
+  "random_seeds": [
+    42,
+    1337,
+    2026
+  ],
+  "hyperparameters": {
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 50
+  },
+  "training_snapshots": [
+    1,
+    2,
+    45
+  ],
+  "evaluation_snapshots": [
+    46
+  ],
+  "data_provenance_hash": "eb867811866a8a16608a806477ec604a626a0ef87e9ac2b56c37449081725512",
+  "dependency_fingerprint": {
+    "python": "3.13.3",
+    "torch": "installed",
+    "torch_geometric": "2.8.0.post1"
+  },
+  "blocking_reasons": [
+    "FATAL: Attempted to train on test partition snapshots [45]. Snapshots 41-49 cannot be used as training data under the continual learning protocol.",
+    "NOTICE: Evaluation window touches snapshots [46]. Original test snapshots 41-49 were examined during thesis decisions and cannot serve as an untouched test set."
+  ],
+  "scientific_justification": "Continual learning is BLOCKED until an independent, unexposed temporal evaluation cohort is established and feature provenance for feat_93-feat_164 is fully verified."
+}

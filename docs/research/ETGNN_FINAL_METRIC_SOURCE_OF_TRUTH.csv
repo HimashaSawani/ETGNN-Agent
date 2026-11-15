@@ -1,0 +1,56 @@
+Metric_Category,Model_or_Split,Metric_Name,Primary_Source_File,Exact_Value,Thesis_Table_or_Section,Status_Classification
+Dataset Partition,Training Split (Steps 1-32),Labelled Nodes Count,data/processed/nodes_with_masks.csv,28938,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Training Split (Steps 1-32),Licit (y=0) Nodes,data/processed/nodes_with_masks.csv,25536,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Training Split (Steps 1-32),Illicit (y=1) Nodes,data/processed/nodes_with_masks.csv,3402,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Training Split (Steps 1-32),Active Graph Edges,data/processed/train_graph.pt,150785,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Validation Split (Steps 33-40),Labelled Nodes Count,data/processed/nodes_with_masks.csv,7653,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Validation Split (Steps 33-40),Licit (y=0) Nodes,data/processed/nodes_with_masks.csv,7034,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Validation Split (Steps 33-40),Illicit (y=1) Nodes,data/processed/nodes_with_masks.csv,619,Section 3.3 / Table 3.2,PASS
+Dataset Partition,Pre-Shift Test (Steps 41-42),Labelled Nodes Count,research_extension/phase12/tables/EXP_A_CANDIDATE_EDGE_SHIFT_CENSUS.csv,3286,Section 3.3 / Table 5.8,PASS
+Dataset Partition,Pre-Shift Test (Steps 41-42),Illicit (y=1) Nodes,research_extension/phase12/tables/EXP_A_CANDIDATE_EDGE_SHIFT_CENSUS.csv,355,Section 3.3 / Table 5.8,PASS
+Dataset Partition,Post-Shift Test (Steps 43-49),Labelled Nodes Count,research_extension/phase12/tables/EXP_A_CANDIDATE_EDGE_SHIFT_CENSUS.csv,6687,Section 3.3 / Table 5.8,PASS
+Dataset Partition,Post-Shift Test (Steps 43-49),Illicit (y=1) Nodes,research_extension/phase12/tables/EXP_A_CANDIDATE_EDGE_SHIFT_CENSUS.csv,169,Section 3.3 / Table 5.8,PASS
+Dataset Partition,Held-Out Test (Steps 41-49),Labelled Nodes Count,data/processed/nodes_with_masks.csv,9973,Section 3.3 / Table 5.1,PASS
+Dataset Partition,Held-Out Test (Steps 41-49),Licit (y=0) Nodes,data/processed/nodes_with_masks.csv,9449,Section 3.3 / Table 5.1,PASS
+Dataset Partition,Held-Out Test (Steps 41-49),Illicit (y=1) Nodes,data/processed/nodes_with_masks.csv,524,Section 3.3 / Table 5.1,PASS
+Dataset Partition,Total Dataset (Steps 1-49),Total Transactions Count,data/processed/nodes_with_masks.csv,203769,Section 3.2 / Table 3.2,PASS
+Dataset Partition,Total Dataset (Steps 1-49),Total Graph Edges,data/processed/test_graph.pt,234355,Section 3.2 / Table 3.2,PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Checkpoint Path,results/checkpoints/etgnn.pt,results/checkpoints/etgnn.pt,Table 4.1 / Table 5.1,PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Checkpoint SHA-256,results/checkpoints/etgnn.pt,b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc,Table 4.1,PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Trainable Parameters,src/models/etgnn.py,11910,Table 3.3 / Table 5.1,PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.225030,Table 5.1 (Rank 11),PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Test ROC-AUC,research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.806248,Table 5.1 (Col 7),PASS (RECTIFIED 0.7679/0.8022)
+Primary Benchmark (Local CPU),ETGNN (165f Full),Test F1 Score (@0.5),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.330764,Table 5.1 (Col 10),PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Test Precision (@0.5),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.261351,Table 5.1 (Col 8),PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Test Recall (@0.5),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.450382,Table 5.1 (Col 9),PASS
+Primary Benchmark (Local CPU),ETGNN (165f Full),Confusion Matrix (TP/FP/TN/FN),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,236/667/8782/288,Table 5.1 (Col 11),PASS
+Primary Benchmark (Local CPU),Random Forest (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.632263,Table 5.1 (Rank 1),PASS
+Primary Benchmark (Local CPU),Random Forest (165f Full),Test ROC-AUC,research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.873531,Table 5.1 (Col 7),PASS
+Primary Benchmark (Local CPU),Random Forest (165f Full),Test F1 Score (@0.5),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.631908,Table 5.1 (Col 10),PASS
+Primary Benchmark (Local CPU),XGBoost (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.547215,Table 5.1 (Rank 4),PASS
+Primary Benchmark (Local CPU),XGBoost (165f Full),Trapz PR-AUC (Inflation),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.585657,Table 5.1 (Col 6),PASS
+Primary Benchmark (Local CPU),ETGNN (93f Local No Edges),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.481170,Table 5.1 (Rank 5),PASS
+Primary Benchmark (Local CPU),"Deep MLP (93f Local, s42)",Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.466234,Table 5.1 (Rank 6),PASS
+Primary Benchmark (Local CPU),GraphSAGE (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.242650,Table 5.1 (Rank 9),PASS
+Primary Benchmark (Local CPU),ETGNN (93f Local),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.234398,Table 5.1 (Rank 10),PASS
+Primary Benchmark (Local CPU),Matched GAT (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.209887,Table 5.1 (Rank 12),PASS
+Primary Benchmark (Local CPU),Standard GCN (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.130568,Table 5.1 (Rank 14),PASS
+Primary Benchmark (Local CPU),Standard GAT (165f Full),Test AP (Primary),research_extension/phase10/PHASE10_MASTER_LOCAL_METRICS.csv,0.115527,Table 5.1 (Rank 15),PASS
+Reproducibility (Colab GPU),Random Forest (165f),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.637966,Table 5.5 (Row 1),PASS
+Reproducibility (Colab GPU),XGBoost (165f),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.644490,Table 5.5 (Row 2),PASS
+Reproducibility (Colab GPU),GraphSAGE (165f),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.303341,Table 5.5 (Row 3),PASS
+Reproducibility (Colab GPU),Standard GAT (165f),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.241678,Table 5.5 (Row 4),PASS
+Reproducibility (Colab GPU),ETGNN (165f Full),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.215312,Table 5.5 (Row 5),PASS
+Reproducibility (Colab GPU),Standard GCN (165f),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.196150,Table 5.5 (Row 6),PASS
+Reproducibility (Colab GPU),Matched GAT (165f),Test AP (Primary),results/colab_extracted_20261103/tables/final_test_results_colab.csv,0.167028,Table 5.5 (Row 7),PASS
+Diagnostic Run (Colab Pro),ETGNN (patience=8),Test AP (Primary),ETGNN_Independent_Training_Verification.ipynb,0.168900,Section 5.6.1 (Diagnostic),PASS
+Diagnostic Run (Colab Pro),ETGNN (patience=8),Validation AP Peak,ETGNN_Independent_Training_Verification.ipynb,0.471940,Section 5.6.1 (Diagnostic),PASS
+Diagnostic Run (Colab Pro),ETGNN (patience=8),Best Epoch,ETGNN_Independent_Training_Verification.ipynb,14,Section 5.6.1 (Diagnostic),PASS
+Diagnostic Run (Colab Pro),ETGNN (patience=20),Test AP (Primary),ETGNN_Controlled_Patience_Verification.ipynb,0.270700,Section 5.6.1 (Diagnostic),PASS
+Diagnostic Run (Colab Pro),ETGNN (patience=20),Validation AP Peak,ETGNN_Controlled_Patience_Verification.ipynb,0.576840,Section 5.6.1 (Diagnostic),PASS
+Diagnostic Run (Colab Pro),ETGNN (patience=20),Best Epoch,ETGNN_Controlled_Patience_Verification.ipynb,40,Section 5.6.1 (Diagnostic),PASS
+Hypothesis Testing,ETGNN vs Matched GAT,Paired Bootstrap 95% CI (AP),results/phase10_benchmarks/PHASE10_STATISTICAL_COMPARISONS.csv,"[-0.0085, +0.0381]",Table 5.3 (C06),PASS (p=0.2149 Inconclusive)
+Hypothesis Testing,ETGNN vs Matched GAT,9-Step Block Bootstrap 95% CI,results/phase10_benchmarks/PHASE10_STATISTICAL_COMPARISONS.csv,"[-0.0725, +0.1095]",Table 5.3 (C06),PASS (Wilcoxon p=0.2031)
+Explainability (C2 Audit),ETGNN Primary TP-FP Gap,Faithfulness Sensitivity Drop,results/main_c1_c2_results/c2_registers_bootstrap_summary.csv,+0.039343,Table 5.7,PASS (pHolm=0.0040)
+Topological Shift (Exp A),Pre-Shift Illicit Disconnection,Zero Candidate Edges (E_cand=0),research_extension/phase12/tables/EXP_A_CANDIDATE_EDGE_SHIFT_CENSUS.csv,13.52% (48/355),Table 5.8,PASS
+Topological Shift (Exp A),Post-Shift Illicit Disconnection,Zero Candidate Edges (E_cand=0),research_extension/phase12/tables/EXP_A_CANDIDATE_EDGE_SHIFT_CENSUS.csv,76.92% (130/169),Table 5.8,PASS

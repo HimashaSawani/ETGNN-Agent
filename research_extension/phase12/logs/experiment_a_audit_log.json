@@ -1,0 +1,10 @@
+{
+  "experiment": "Experiment A \u2014 Temporal Explanation Stability",
+  "status": "COMPLETED",
+  "wall_time_sec": 609.53,
+  "peak_rss_mb": 52.7,
+  "n_test_total": 9973,
+  "n_cohort_evaluated": 200,
+  "n_matched_pairs": 59,
+  "max_subgraph_equivalence_diff": 5.960464477539062e-07
+}

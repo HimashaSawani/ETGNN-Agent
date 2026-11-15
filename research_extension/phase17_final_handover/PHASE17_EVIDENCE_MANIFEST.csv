@@ -1,0 +1,29 @@
+category,file_path,file_size_bytes,sha256_hash,description
+Thesis & Viva,research_extension\\phase16_submission_qa\\ETGNN_Phase16_Submission_Final.docx,1883781,dfc4f031ce06fd3782a3c18fa3df89294ae14a657aac09b8f124664340b7f63a,Authoritative Final Revised Thesis (DOCX)
+Thesis & Viva,research_extension\\phase16_submission_qa\\ETGNN_Phase16_Submission_Final.pdf,771113,c7c4f8fbec7af787476a956339e51eb7cd1007834ad44ddfd1c3ed3e7488f374,Authoritative Final Rendered Thesis (PDF - 53 pages)
+Thesis & Viva,research_extension\\phase16_submission_qa\\PHASE16_VIVA_QUESTIONS_AND_ANSWERS.docx,46287,cd86080f093440bd3c314b454fc792348da3d096ab967632f026890b35733f26,Viva Voce Defense Preparation Guide (17 questions)
+Thesis & Viva,thesis\\phase12_final_integration\\ETGNN_Phase12_Final_Corrected_Thesis.docx,1885258,31566c1c5157935b2426850308ce0f91d4509fea7973c7b165397fdec3c188a7,Historical Phase 12 Thesis (Preserved Intact)
+Thesis & Viva,research_extension\\phase15_final_thesis\\ETGNN_Phase15_Final_Revised_Thesis.docx,1883299,090125ecb57250b0cd17190e90dbca7af15174b67b905bd02d7f28310b2df40e,Phase 15 Master Integrated Thesis (DOCX)
+Checkpoint,results\\checkpoints\\etgnn.pt,50929,b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc,"Canonical Baseline ETGNN Checkpoint (11,910 params)"
+Checkpoint,results\\checkpoints\\random_forest.joblib,3795369,81cb2eea545694e0be87c1c96338c70e908be6d97d4b49547443005338eef730,Random Forest 165f Model Checkpoint (100 trees)
+Checkpoint,results\\checkpoints\\xgboost.json,83292,9cd5508970db433b69f92b1b5b2fb2d2711545acddca5ce4d8ab7ba957796ccb,XGBoost 165f Model Checkpoint (300 trees)
+Checkpoint,ETGNN_Phase13_Results_Bundle.zip,3657029,ae9101003b9ce6f5032b4b63babf4f5e7f18eec8ad1b5ce70a2fee4deb8535f9,Phase 13 Colab Pro T4 GPU Archive (25 checkpoints)
+Data Partition,data\\processed\\train_graph.pt,92157381,2f77f1e0d94c4aa81e21293c089a9a2df7d9cd099db5f4669213cce0f92e8fc4,"Train Graph: Steps 1..32 (129,545 nodes, 3,045 illicit)"
+Data Partition,data\\processed\\validation_graph.pt,114002507,261b7ee5951d386bee9843adfc2471726ec9f433341d7c4359c7f66e44cbfc71,"Validation Graph: Steps 33..40 (32,875 nodes, 1,019 illicit)"
+Data Partition,data\\processed\\test_graph.pt,143742199,242e0697a697765b4e954388b4ca6328f4ab74f0cc64f9e5ba08321146e1196b,"Held-Out Test Graph: Steps 41..49 (41,349 nodes, 473 illicit)"
+Experiment Output,research_extension\\phase14b_final_completion\\PHASE14B_FINAL_MODEL_COMPARISON.csv,2230,f1a907bf7249d69a674d72839ba000f070607341b4f42df571bec2d676632601,Authoritative 8-Model Test Split Benchmark Table
+Experiment Output,research_extension\\phase14b_final_completion\\TREE_BASELINES_TEST_EVALUATION.csv,968,b140b12bc771057ab85006a63cc1890a89eb39f566a5e22600bfbdc5ee2ee97f,Direct Test-Split Evaluation of Tree Models (RF: 0.6323)
+Experiment Output,research_extension\\phase14b_final_completion\\C1_C2_MATCHED_INTERVENTION_EXPERIMENTS.csv,95764,a6e086e6ab5276af1c0816951e762b6a6cf3c36af9171372adddc242384b88cc,"Protocol C1 & C2 Matched Interventions (275 pairs, 550 nodes)"
+Experiment Output,research_extension\\phase14b_final_completion\\MULTIPLE_TESTING_CORRECTION_AUDIT.csv,594,b91ac0691fa424eaae1f56c2e93a63544153c14a7ddae09657e06da019e36c4e,Holm-Bonferroni & Benjamini-Hochberg FDR Statistical Audit
+Experiment Output,research_extension\\phase14b_final_completion\\DEGREE_STRATIFIED_XAI_SUMMARY.csv,256,388736507f1e66a0d539082fddaf072a8270cd5327a5d2dfc9102cb9e9f5216f,Degree-Stratified XAI Boundary Summary (k=1)
+Experiment Output,research_extension\\phase14_results_analysis\\M3_GATE_ACTIVATION_DIAGNOSTICS.csv,1512,7951b3a1b66892bc16ddc0fcf9793637bb16bb872cec10e7dccabf850a2ab17c,Internal Tensor Diagnostics Proving Layer 2 Gate Collapse
+Experiment Output,research_extension\\phase13_advanced_investigation\\PHASE13_TEST_METRICS.csv,4746,81fd599f2063846f59af028e32319590234dc3b3bd5cac06a90cc7741dcec07e,Phase 13 Multi-Seed Test Evaluation Metrics (M0-M4)
+Figure,research_extension\\phase14b_final_completion\\phase14b_complete_benchmark_comparison.png,239916,aad195dc4fd587074e6ecd317a99c4cd252acc1a46c0f5130cca0263146989d4,Publication Figure: 8-Model Test AUPRC Comparison
+Figure,research_extension\\phase14b_final_completion\\phase14b_c1_feature_vs_edge_intervention.png,127414,7712f9f17e6c7f8db8762edd236ade356d6c6f6d09fa6e2d977ded844c311d0d,Publication Figure: Protocol C1 Feature vs Edge Drop
+Figure,research_extension\\phase14b_final_completion\\phase14b_c2_counterfactual_flip_rates.png,107449,81c100783296a66bd5a3e38b374514fbb3e0c6b38076fb8b0694389360f61f82,Publication Figure: Protocol C2 Counterfactual Flip Sensitivity
+Report,research_extension\\phase16_submission_qa\\PHASE16_INDEPENDENT_THESIS_AUDIT.md,9763,1f6501c7b2144e0c8efe16799c82048a8ba42a869778a14dd28722aa9b8abdf5,Phase 16 Independent Thesis Quality Assurance Audit
+Report,research_extension\\phase16_submission_qa\\PHASE16_SCIENTIFIC_CLAIMS_VERIFICATION.md,9984,46b9b3d4880e939d94bc4a63ab6cace08bf83c2a227b0bde4b495d66247abb04,Phase 16 Scientific Claims Verification Matrix
+Report,research_extension\\phase16_submission_qa\\PHASE16_SUBMISSION_READINESS_REPORT.md,7027,cb81c91fccf96cd629e9808a011fc8918e5d7913b6ecdfc8ef81ca212047007b,Phase 16 Final Submission Readiness Report
+Report,research_extension\\phase15_final_thesis\\PHASE15_RESEARCH_OBJECTIVES_MAPPING.md,11357,1c6bd67f3e914d6c1ff8d5952cb8b9c97ef3f8178b48700c138baec4f56844d7,Phase 15 Research Objectives Mapping (RO1-RO5)
+Report,research_extension\\phase15_final_thesis\\PHASE15_FINAL_C1_C2_SUMMARY.md,7448,f4171e8d32fa83a5fba129d86d7b44e8748d0e7e04c016f12bb3154e481b0caf,Phase 15 C1/C2 Explainability & Diagnostic Summary
+Report,research_extension\\phase15_final_thesis\\PHASE15_FINAL_RESEARCH_REPORT.md,11897,1957c37cf8a0dd533ec69b54c6b453157b22b4ec49e096aacff5cb7fdd0341b3,Phase 15 Comprehensive Research Synthesis Report

@@ -1,0 +1,65 @@
+{
+  "phase": "Phase 12 — Temporal Explanation Stability & Explanation-Guided Error Mitigation",
+  "repository_root": "D:/ETGNN-Fraud-Detection",
+  "preserve_existing_artifacts": true,
+  "data_artifacts": {
+    "validation_graph": "data/processed/validation_graph.pt",
+    "test_graph": "data/processed/test_graph.pt",
+    "nodes_with_masks": "data/processed/nodes_with_masks.csv",
+    "scaled_features": "data/processed/scaled_features.npy"
+  },
+  "checkpoints": {
+    "etgnn_165f_primary": "results/checkpoints/etgnn.pt",
+    "matched_gat_165f_primary": "results/checkpoints/matched_gat.pt",
+    "etgnn_93f_local": "results/checkpoints/etgnn_local.pt",
+    "etgnn_93f_local_no_edges": "results/checkpoints/etgnn_local_no_edges.pt",
+    "multiseed_etgnn_165f": [
+      "results/optimization_experiments/checkpoints/P3-01_165f_orig_etgnn_s42.pt",
+      "results/optimization_experiments/checkpoints/P3-01_165f_orig_etgnn_s43.pt",
+      "results/optimization_experiments/checkpoints/P3-01_165f_orig_etgnn_s44.pt"
+    ],
+    "multiseed_etgnn_93f": [
+      "results/optimization_experiments/checkpoints/P3-01_93f_orig_etgnn_s42.pt",
+      "results/optimization_experiments/checkpoints/P3-01_93f_orig_etgnn_s43.pt",
+      "results/optimization_experiments/checkpoints/P3-01_93f_orig_etgnn_s44.pt"
+    ]
+  },
+  "safeguards": {
+    "subgraph_hops": 2,
+    "subgraph_flow": "source_to_target",
+    "forward_pass_equivalence_tol": 1e-5,
+    "validation_only_tuning": true,
+    "quarantine_test_during_selection": true
+  },
+  "experiment_a": {
+    "pre_shift_steps": [41, 42],
+    "post_shift_steps": [43, 44, 45, 46, 47, 48, 49],
+    "min_candidate_edges_for_ranking": 2,
+    "stratified_cohort_per_period": 100,
+    "illicit_per_period": 50,
+    "licit_per_period": 50,
+    "explainer_seeds": [42, 43, 44],
+    "model_seeds": [42, 43, 44],
+    "gnn_explainer_epochs": 50,
+    "gnn_explainer_lr": 0.05,
+    "budget_alpha": 0.25,
+    "random_comparator_draws": 30,
+    "bootstrap_replicates": 2000,
+    "random_seed": 20261104
+  },
+  "experiment_b": {
+    "validation_steps": [33, 34, 35, 36, 37, 38, 39, 40],
+    "test_steps": [41, 42, 43, 44, 45, 46, 47, 48, 49],
+    "pre_shift_steps": [41, 42],
+    "post_shift_steps": [43, 44, 45, 46, 47, 48, 49],
+    "default_threshold": 0.50,
+    "routing_fractions_grid": [0.05, 0.10, 0.15, 0.20, 0.25, 0.30, 0.40, 0.50, 0.75, 1.00],
+    "sensitivity_thresholds_grid": [0.005, 0.01, 0.02, 0.03, 0.05, 0.08, 0.10, 0.15, 0.20, 0.30],
+    "blend_weights_grid": [0.0, 0.25, 0.50, 0.75, 1.00],
+    "random_control_draws": 50,
+    "ece_num_bins": 10,
+    "bootstrap_replicates": 2000,
+    "random_seed": 20261104
+  }
+}
+

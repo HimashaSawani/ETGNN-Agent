@@ -1,0 +1,741 @@
+{
+  "models": {
+    "etgnn.py": {
+      "classes": [
+        "ETGNNClassifier"
+      ],
+      "functions": [
+        "__init__",
+        "forward"
+      ],
+      "lines": 25
+    },
+    "gat.py": {
+      "classes": [
+        "GATClassifier"
+      ],
+      "functions": [
+        "__init__",
+        "forward"
+      ],
+      "lines": 18
+    },
+    "gcn.py": {
+      "classes": [
+        "GCNClassifier"
+      ],
+      "functions": [
+        "__init__",
+        "forward"
+      ],
+      "lines": 15
+    },
+    "graphsage.py": {
+      "classes": [
+        "GraphSAGEClassifier"
+      ],
+      "functions": [
+        "__init__",
+        "forward"
+      ],
+      "lines": 16
+    },
+    "matched_gat.py": {
+      "classes": [
+        "MatchedGATClassifier"
+      ],
+      "functions": [
+        "forward"
+      ],
+      "lines": 15
+    },
+    "reliability_etgnn.py": {
+      "classes": [
+        "ResidualETGNNClassifier",
+        "GatedGATConv",
+        "ReliabilityAwareETGNNClassifier",
+        "DeepParameterMatchedMLP"
+      ],
+      "functions": [
+        "__init__",
+        "forward",
+        "__init__",
+        "reset_parameters",
+        "forward",
+        "message",
+        "__init__",
+        "forward",
+        "__init__",
+        "forward"
+      ],
+      "lines": 205
+    },
+    "time_encoding.py": {
+      "classes": [],
+      "functions": [
+        "encode_time"
+      ],
+      "lines": 16
+    },
+    "__init__.py": {
+      "classes": [],
+      "functions": [],
+      "lines": 5
+    }
+  },
+  "checkpoints": {
+    "etgnn.pt": {
+      "size": 50929,
+      "sha256": "b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc"
+    },
+    "etgnn_local.pt": {
+      "size": 32901,
+      "sha256": "2904d54881a9ee2d0d3d6cea26e1ef717b60bac3ab661f4d3c7a116ac60f9082"
+    },
+    "etgnn_local_no_edges.pt": {
+      "size": 33027,
+      "sha256": "cba8abf988d6caa1afed2612c6219a20e62df6e477639313a8e393e98d7af6db"
+    },
+    "gat.pt": {
+      "size": 46805,
+      "sha256": "6b6b9e06353d35743d2ae93ad0465b115716950e0666ebb105fbe73fbe6a4901"
+    },
+    "gcn.pt": {
+      "size": 45365,
+      "sha256": "517f9102c28f44b0a18bcb349b6bb547948c5d71ed7a194f655d85ca81d3706d"
+    },
+    "graphsage.pt": {
+      "size": 89005,
+      "sha256": "040b5ea29334f93afbaf0265b52bf106a70db959d163930ebd81d1f9ad25f5ca"
+    },
+    "matched_gat.pt": {
+      "size": 51333,
+      "sha256": "1e9b43ea1cc25a26dd8bbe953c49a8782a0d9c27b5e0da17afe726fd21405074"
+    },
+    "random_forest.joblib": {
+      "size": 3795369,
+      "sha256": "81cb2eea545694e0be87c1c96338c70e908be6d97d4b49547443005338eef730"
+    },
+    "rf_local.joblib": {
+      "size": 3882089,
+      "sha256": "12043a345a9d2862296be83cf66628a2f4d62a2e98358c55e9ce1d57b9e13744"
+    },
+    "rf_with_time.joblib": {
+      "size": 3916329,
+      "sha256": "ded92f6ae1e0b05349364b0232e50dd11249462c329c2ec0a5c1b15e5837ebbf"
+    },
+    "xgboost.json": {
+      "size": 83292,
+      "sha256": "9cd5508970db433b69f92b1b5b2fb2d2711545acddca5ce4d8ab7ba957796ccb"
+    }
+  },
+  "c1_c2": {
+    "c1": {
+      "rows": 5,
+      "columns": [
+        "Cohort",
+        "N",
+        "delta_adj_mean",
+        "delta_adj_sample_sd",
+        "delta_adj_median",
+        "delta_adj_iqr",
+        "delta_raw_mean",
+        "delta_raw_sample_sd",
+        "delta_raw_median",
+        "adv_etgnn_mean",
+        "adv_gat_common_mean",
+        "note"
+      ],
+      "data": [
+        {
+          "Cohort": "Overall (N=240)",
+          "N": 240,
+          "delta_adj_mean": 0.0029028999971626,
+          "delta_adj_sample_sd": 0.0961795146324668,
+          "delta_adj_median": -0.001533597956101,
+          "delta_adj_iqr": 0.0459038299818833,
+          "delta_raw_mean": 0.0384911164852264,
+          "delta_raw_sample_sd": 0.1391704638854143,
+          "delta_raw_median": 0.0060225725173949,
+          "adv_etgnn_mean": 0.0202387708180402,
+          "adv_gat_common_mean": 0.0173358708208776,
+          "note": "Sample SD is transaction variance across cohort; not standard error of mean."
+        },
+        {
+          "Cohort": "TP (N=95)",
+          "N": 95,
+          "delta_adj_mean": -0.0059727887240777,
+          "delta_adj_sample_sd": 0.1324914092820431,
+          "delta_adj_median": -0.0014003833134969,
+          "delta_adj_iqr": 0.0448462257782617,
+          "delta_raw_mean": 0.0404116529834222,
+          "delta_raw_sample_sd": 0.1822073436140986,
+          "delta_raw_median": 0.0003838539123535,
+          "adv_etgnn_mean": -0.0033095311595682,
+          "adv_gat_common_mean": 0.0026632575645095,
+          "note": "Sample SD is transaction variance across cohort; not standard error of mean."
+        },
+        {
+          "Cohort": "FP (N=95)",
+          "N": 95,
+          "delta_adj_mean": 0.0113665300380569,
+          "delta_adj_sample_sd": 0.0510974979223789,
+          "delta_adj_median": -0.000205373764038,
+          "delta_adj_iqr": 0.0416821748018264,
+          "delta_raw_mean": 0.0400851362973059,
+          "delta_raw_sample_sd": 0.0924164553449792,
+          "delta_raw_median": 0.0216091275215148,
+          "adv_etgnn_mean": 0.0360336591494514,
+          "adv_gat_common_mean": 0.0246671291113945,
+          "note": "Sample SD is transaction variance across cohort; not standard error of mean."
+        },
+        {
+          "Cohort": "TN (N=25)",
+          "N": 25,
+          "delta_adj_mean": 0.0134443921248118,
+          "delta_adj_sample_sd": 0.0856331499290498,
+          "delta_adj_median": 0.0,
+          "delta_adj_iqr": 0.0525468915700912,
+          "delta_raw_mean": 0.0447341517607371,
+          "delta_raw_sample_sd": 0.1324154525071684,
+          "delta_raw_median": 0.0101373593012491,
+          "adv_etgnn_mean": 0.06398371108373,
+          "adv_gat_common_mean": 0.0505393189589182,
+          "note": "Sample SD is transaction variance across cohort; not standard error of mean."
+        },
+        {
+          "Cohort": "FN (N=25)",
+          "N": 25,
+          "delta_adj_mean": -0.0060727691451708,
+          "delta_adj_sample_sd": 0.0707966584924506,
+          "delta_adj_median": -0.0178434044122695,
+          "delta_adj_iqr": 0.065701346596082,
+          "delta_raw_mean": 0.0188927672306696,
+          "delta_raw_sample_sd": 0.1067475747675426,
+          "delta_raw_median": -0.0041741132736206,
+          "adv_etgnn_mean": 0.0059568024079004,
+          "adv_gat_common_mean": 0.0120295715530713,
+          "note": "Sample SD is transaction variance across cohort; not standard error of mean."
+        }
+      ]
+    },
+    "c2": {
+      "rows": 8,
+      "columns": [
+        "register",
+        "pairs_count",
+        "mean_diff",
+        "bootstrap_se",
+        "ci_95_low",
+        "ci_95_high",
+        "graph_dependence_limitation",
+        "model",
+        "contrast_formula",
+        "match_type",
+        "ci_crosses_zero",
+        "interpretation"
+      ],
+      "data": [
+        {
+          "register": "ETGNN Primary TP-FP",
+          "pairs_count": 95,
+          "mean_diff": 0.0393431903090197,
+          "bootstrap_se": 0.0095847803468459,
+          "ci_95_low": 0.0202340976379101,
+          "ci_95_high": 0.0574100963759047,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "ETGNN",
+          "contrast_formula": "A(FP) - A(TP)",
+          "match_type": "Primary Caliper",
+          "ci_crosses_zero": false,
+          "interpretation": "Advantage larger for FP than TP (CI excludes 0)"
+        },
+        {
+          "register": "ETGNN Degree-Sensitivity TP-FP",
+          "pairs_count": 57,
+          "mean_diff": 0.04345522015764,
+          "bootstrap_se": 0.0126575859262979,
+          "ci_95_low": 0.0198815816340216,
+          "ci_95_high": 0.0695516607696898,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "ETGNN",
+          "contrast_formula": "A(FP) - A(TP)",
+          "match_type": "Degree-Sensitivity",
+          "ci_crosses_zero": false,
+          "interpretation": "Advantage larger for FP than TP (CI excludes 0)"
+        },
+        {
+          "register": "ETGNN Primary TN-FN",
+          "pairs_count": 25,
+          "mean_diff": -0.0580269086758295,
+          "bootstrap_se": 0.0343979225905401,
+          "ci_95_low": -0.1288309584806362,
+          "ci_95_high": 0.0063931284974018,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "ETGNN",
+          "contrast_formula": "A(FN) - A(TN)",
+          "match_type": "Primary Caliper",
+          "ci_crosses_zero": true,
+          "interpretation": "CI spans zero; sensitive to matching / imprecise"
+        },
+        {
+          "register": "ETGNN Degree-Sensitivity TN-FN",
+          "pairs_count": 25,
+          "mean_diff": -0.0197479398151238,
+          "bootstrap_se": 0.0297495912309209,
+          "ci_95_low": -0.0815926589908699,
+          "ci_95_high": 0.0363118863982458,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "ETGNN",
+          "contrast_formula": "A(FN) - A(TN)",
+          "match_type": "Degree-Sensitivity",
+          "ci_crosses_zero": true,
+          "interpretation": "CI spans zero; sensitive to matching / imprecise"
+        },
+        {
+          "register": "Matched GAT Primary TP-FP",
+          "pairs_count": 94,
+          "mean_diff": 0.020315191804865,
+          "bootstrap_se": 0.0089233915351445,
+          "ci_95_low": 0.0039174955166506,
+          "ci_95_high": 0.0386839723109969,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "Matched GAT",
+          "contrast_formula": "A(FP) - A(TP)",
+          "match_type": "Primary Caliper",
+          "ci_crosses_zero": false,
+          "interpretation": "Advantage larger for FP than TP (CI excludes 0)"
+        },
+        {
+          "register": "Matched GAT Degree-Sensitivity TP-FP",
+          "pairs_count": 82,
+          "mean_diff": 0.0105473450797452,
+          "bootstrap_se": 0.0116102817502618,
+          "ci_95_low": -0.0132402458803084,
+          "ci_95_high": 0.032770431578911,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "Matched GAT",
+          "contrast_formula": "A(FP) - A(TP)",
+          "match_type": "Degree-Sensitivity",
+          "ci_crosses_zero": true,
+          "interpretation": "CI spans zero; sensitive to matching / imprecise"
+        },
+        {
+          "register": "Matched GAT Primary TN-FN",
+          "pairs_count": 21,
+          "mean_diff": 0.0522551234271968,
+          "bootstrap_se": 0.0515171237809394,
+          "ci_95_low": -0.0461527085506416,
+          "ci_95_high": 0.1624597022818431,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "Matched GAT",
+          "contrast_formula": "A(FN) - A(TN)",
+          "match_type": "Primary Caliper",
+          "ci_crosses_zero": true,
+          "interpretation": "CI spans zero; sensitive to matching / imprecise"
+        },
+        {
+          "register": "Matched GAT Degree-Sensitivity TN-FN",
+          "pairs_count": 21,
+          "mean_diff": 0.0724887863503739,
+          "bootstrap_se": 0.0518814436063065,
+          "ci_95_low": -0.0247210228095747,
+          "ci_95_high": 0.1785871429129185,
+          "graph_dependence_limitation": "Transactions reside in connected graph; pairs assume independent cluster resampling.",
+          "model": "Matched GAT",
+          "contrast_formula": "A(FN) - A(TN)",
+          "match_type": "Degree-Sensitivity",
+          "ci_crosses_zero": true,
+          "interpretation": "CI spans zero; sensitive to matching / imprecise"
+        }
+      ]
+    }
+  },
+  "phase10_phase12": {
+    "phase10_columns": [
+      "Model",
+      "Paradigm",
+      "Feature_Space",
+      "Uses_Graph_Edges",
+      "Parameters",
+      "Cohort",
+      "Checkpoint_Path",
+      "Checkpoint_Bytes",
+      "SHA256",
+      "AP_Primary",
+      "PR_AUC_Trapz",
+      "AP_minus_Trapz",
+      "ROC_AUC",
+      "Precision_0.5",
+      "Recall_0.5",
+      "F1_0.5",
+      "TP",
+      "FP",
+      "TN",
+      "FN"
+    ],
+    "phase10_models": [
+      {
+        "Model": "Random Forest (165f Full)",
+        "Paradigm": "Tree Ensemble",
+        "Feature_Space": "165f Full",
+        "Uses_Graph_Edges": "No",
+        "Parameters": "N/A (100 trees)",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/random_forest.joblib",
+        "Checkpoint_Bytes": 3795369,
+        "SHA256": "81cb2eea545694e0be87c1c96338c70e908be6d97d4b49547443005338eef730",
+        "AP_Primary": 0.6322625410444417,
+        "PR_AUC_Trapz": 0.632162162859025,
+        "AP_minus_Trapz": 0.0001003781854166,
+        "ROC_AUC": 0.8735305808038171,
+        "Precision_0.5": 0.696551724137931,
+        "Recall_0.5": 0.5782442748091603,
+        "F1_0.5": 0.6319082377476538,
+        "TP": 303,
+        "FP": 132,
+        "TN": 9317,
+        "FN": 221
+      },
+      {
+        "Model": "Random Forest (93f Local)",
+        "Paradigm": "Tree Ensemble",
+        "Feature_Space": "93f Local",
+        "Uses_Graph_Edges": "No",
+        "Parameters": "N/A (100 trees)",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/rf_local.joblib",
+        "Checkpoint_Bytes": 3882089,
+        "SHA256": "12043a345a9d2862296be83cf66628a2f4d62a2e98358c55e9ce1d57b9e13744",
+        "AP_Primary": 0.6300992874445841,
+        "PR_AUC_Trapz": 0.6297830900985175,
+        "AP_minus_Trapz": 0.0003161973460665,
+        "ROC_AUC": 0.8515233244925147,
+        "Precision_0.5": 0.56353591160221,
+        "Recall_0.5": 0.583969465648855,
+        "F1_0.5": 0.5735707591377694,
+        "TP": 306,
+        "FP": 237,
+        "TN": 9212,
+        "FN": 218
+      },
+      {
+        "Model": "RF + Time (165f + 16t)",
+        "Paradigm": "Tree Ensemble",
+        "Feature_Space": "165f + 16t",
+        "Uses_Graph_Edges": "No",
+        "Parameters": "N/A (100 trees)",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/rf_with_time.joblib",
+        "Checkpoint_Bytes": 3916329,
+        "SHA256": "ded92f6ae1e0b05349364b0232e50dd11249462c329c2ec0a5c1b15e5837ebbf",
+        "AP_Primary": 0.6295021559653965,
+        "PR_AUC_Trapz": 0.6294027894700437,
+        "AP_minus_Trapz": 9.936649535280397e-05,
+        "ROC_AUC": 0.867172825752392,
+        "Precision_0.5": 0.6594360086767896,
+        "Recall_0.5": 0.5801526717557252,
+        "F1_0.5": 0.617258883248731,
+        "TP": 304,
+        "FP": 157,
+        "TN": 9292,
+        "FN": 220
+      },
+      {
+        "Model": "XGBoost (165f Full)",
+        "Paradigm": "Gradient Boosted",
+        "Feature_Space": "165f Full",
+        "Uses_Graph_Edges": "No",
+        "Parameters": "N/A (300 trees)",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/xgboost.json",
+        "Checkpoint_Bytes": 83292,
+        "SHA256": "9cd5508970db433b69f92b1b5b2fb2d2711545acddca5ce4d8ab7ba957796ccb",
+        "AP_Primary": 0.5472145930392412,
+        "PR_AUC_Trapz": 0.5856569165636674,
+        "AP_minus_Trapz": -0.0384423235244261,
+        "ROC_AUC": 0.8074195419524179,
+        "Precision_0.5": 0.2822796081923419,
+        "Recall_0.5": 0.6049618320610687,
+        "F1_0.5": 0.3849423193685489,
+        "TP": 317,
+        "FP": 806,
+        "TN": 8643,
+        "FN": 207
+      },
+      {
+        "Model": "ETGNN (93f Local No Edges)",
+        "Paradigm": "Time-Encoded Neural (E=0)",
+        "Feature_Space": "93f + 16t",
+        "Uses_Graph_Edges": "No (E=0)",
+        "Parameters": "7302",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/etgnn_local_no_edges.pt",
+        "Checkpoint_Bytes": 33027,
+        "SHA256": "cba8abf988d6caa1afed2612c6219a20e62df6e477639313a8e393e98d7af6db",
+        "AP_Primary": 0.4811703941571835,
+        "PR_AUC_Trapz": 0.480018397203921,
+        "AP_minus_Trapz": 0.0011519969532625,
+        "ROC_AUC": 0.8106650689640409,
+        "Precision_0.5": 0.2445117335352006,
+        "Recall_0.5": 0.6164122137404581,
+        "F1_0.5": 0.3501355013550135,
+        "TP": 323,
+        "FP": 998,
+        "TN": 8451,
+        "FN": 201
+      },
+      {
+        "Model": "MLP (93f Local, s42)",
+        "Paradigm": "Feedforward Neural",
+        "Feature_Space": "93f + 16t",
+        "Uses_Graph_Edges": "No (E=0)",
+        "Parameters": "22466",
+        "Cohort": "Phase 3 Existing",
+        "Checkpoint_Path": "results/optimization_experiments/checkpoints/P3-05_93f_matched_mlp_s42.pt",
+        "Checkpoint_Bytes": 93165,
+        "SHA256": "8bb6976e0b727fee94ab484ca8b51b949146aa7620335f447b05a3c6e1e14ceb",
+        "AP_Primary": 0.4662344088118032,
+        "PR_AUC_Trapz": 0.4651373560270107,
+        "AP_minus_Trapz": 0.0010970527847925,
+        "ROC_AUC": 0.8028364809394588,
+        "Precision_0.5": 0.2887650882079851,
+        "Recall_0.5": 0.5935114503816794,
+        "F1_0.5": 0.3885071830106184,
+        "TP": 311,
+        "FP": 766,
+        "TN": 8683,
+        "FN": 213
+      },
+      {
+        "Model": "MLP (165f Full, s42)",
+        "Paradigm": "Feedforward Neural",
+        "Feature_Space": "165f + 16t",
+        "Uses_Graph_Edges": "No (E=0)",
+        "Parameters": "31682",
+        "Cohort": "Phase 3 Existing",
+        "Checkpoint_Path": "results/optimization_experiments/checkpoints/P3-05_165f_matched_mlp_s42.pt",
+        "Checkpoint_Bytes": 130041,
+        "SHA256": "eae457b40fb1d0f4582b49c2b2610f73363836be72b6eda4ce0f454bedea9e60",
+        "AP_Primary": 0.3602744829285959,
+        "PR_AUC_Trapz": 0.3594034224768785,
+        "AP_minus_Trapz": 0.0008710604517173,
+        "ROC_AUC": 0.8206149283538224,
+        "Precision_0.5": 0.1197332525007578,
+        "Recall_0.5": 0.7538167938931297,
+        "F1_0.5": 0.2066439968611038,
+        "TP": 395,
+        "FP": 2904,
+        "TN": 6545,
+        "FN": 129
+      },
+      {
+        "Model": "Logistic Regression (93f Local)",
+        "Paradigm": "Linear Classifier",
+        "Feature_Space": "93f Local",
+        "Uses_Graph_Edges": "No",
+        "Parameters": "94",
+        "Cohort": "Phase 9 Isolated",
+        "Checkpoint_Path": "research_extension/phase9/checkpoints/logistic_regression_local.joblib",
+        "Checkpoint_Bytes": 1227,
+        "SHA256": "329e1e8fec3483237a5ed908ab50b3120f13a7f6d2caaa29f0bd7a0e0f8c882b",
+        "AP_Primary": 0.2511784508566431,
+        "PR_AUC_Trapz": 0.2510713478873677,
+        "AP_minus_Trapz": 0.0001071029692754,
+        "ROC_AUC": 0.8413695782662893,
+        "Precision_0.5": 0.1377794063759619,
+        "Recall_0.5": 0.7175572519083969,
+        "F1_0.5": 0.2311712265600983,
+        "TP": 376,
+        "FP": 2353,
+        "TN": 7096,
+        "FN": 148
+      },
+      {
+        "Model": "GraphSAGE (165f Full)",
+        "Paradigm": "Static GNN",
+        "Feature_Space": "165f Full",
+        "Uses_Graph_Edges": "Yes (E=234k)",
+        "Parameters": "21442",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/graphsage.pt",
+        "Checkpoint_Bytes": 89005,
+        "SHA256": "040b5ea29334f93afbaf0265b52bf106a70db959d163930ebd81d1f9ad25f5ca",
+        "AP_Primary": 0.2426502530012321,
+        "PR_AUC_Trapz": 0.2416645999155927,
+        "AP_minus_Trapz": 0.0009856530856393,
+        "ROC_AUC": 0.820497180928714,
+        "Precision_0.5": 0.1238155401137081,
+        "Recall_0.5": 0.7480916030534351,
+        "F1_0.5": 0.2124661246612466,
+        "TP": 392,
+        "FP": 2774,
+        "TN": 6675,
+        "FN": 132
+      },
+      {
+        "Model": "ETGNN (93f Local)",
+        "Paradigm": "Temporal GNN",
+        "Feature_Space": "93f + 16t",
+        "Uses_Graph_Edges": "Yes (E=234k)",
+        "Parameters": "7302",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/etgnn_local.pt",
+        "Checkpoint_Bytes": 32901,
+        "SHA256": "2904d54881a9ee2d0d3d6cea26e1ef717b60bac3ab661f4d3c7a116ac60f9082",
+        "AP_Primary": 0.234398074252363,
+        "PR_AUC_Trapz": 0.2334077214035654,
+        "AP_minus_Trapz": 0.0009903528487975,
+        "ROC_AUC": 0.7893942894720473,
+        "Precision_0.5": 0.2224899598393574,
+        "Recall_0.5": 0.5286259541984732,
+        "F1_0.5": 0.3131712832108536,
+        "TP": 277,
+        "FP": 968,
+        "TN": 8481,
+        "FN": 247
+      },
+      {
+        "Model": "ETGNN (165f Full)",
+        "Paradigm": "Temporal GNN (Proposed)",
+        "Feature_Space": "165f + 16t",
+        "Uses_Graph_Edges": "Yes (E=234k)",
+        "Parameters": "11910",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/etgnn.pt",
+        "Checkpoint_Bytes": 50929,
+        "SHA256": "b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc",
+        "AP_Primary": 0.2250299095815509,
+        "PR_AUC_Trapz": 0.2238428571592205,
+        "AP_minus_Trapz": 0.0011870524223303,
+        "ROC_AUC": 0.8062475208410924,
+        "Precision_0.5": 0.2613510520487264,
+        "Recall_0.5": 0.4503816793893129,
+        "F1_0.5": 0.3307638402242466,
+        "TP": 236,
+        "FP": 667,
+        "TN": 8782,
+        "FN": 288
+      },
+      {
+        "Model": "Matched GAT (165f Full)",
+        "Paradigm": "Zero-Time GNN Control",
+        "Feature_Space": "165f + 16z",
+        "Uses_Graph_Edges": "Yes (E=234k)",
+        "Parameters": "11910",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/matched_gat.pt",
+        "Checkpoint_Bytes": 51333,
+        "SHA256": "1e9b43ea1cc25a26dd8bbe953c49a8782a0d9c27b5e0da17afe726fd21405074",
+        "AP_Primary": 0.2098869782448363,
+        "PR_AUC_Trapz": 0.2086715745591833,
+        "AP_minus_Trapz": 0.0012154036856529,
+        "ROC_AUC": 0.8175476382249748,
+        "Precision_0.5": 0.1205080545229244,
+        "Recall_0.5": 0.7423664122137404,
+        "F1_0.5": 0.2073560767590618,
+        "TP": 389,
+        "FP": 2839,
+        "TN": 6610,
+        "FN": 135
+      },
+      {
+        "Model": "Logistic Regression (165f Full)",
+        "Paradigm": "Linear Classifier",
+        "Feature_Space": "165f Full",
+        "Uses_Graph_Edges": "No",
+        "Parameters": "166",
+        "Cohort": "Phase 9 Isolated",
+        "Checkpoint_Path": "research_extension/phase9/checkpoints/logistic_regression_full.joblib",
+        "Checkpoint_Bytes": 1515,
+        "SHA256": "0555ee0971a280493c3302432c44eccaeb92ea8a151599260bae60095c8c3e97",
+        "AP_Primary": 0.1905072391902831,
+        "PR_AUC_Trapz": 0.1896716410957248,
+        "AP_minus_Trapz": 0.0008355980945583,
+        "ROC_AUC": 0.8219014654000302,
+        "Precision_0.5": 0.1658004158004158,
+        "Recall_0.5": 0.6087786259541985,
+        "F1_0.5": 0.2606209150326797,
+        "TP": 319,
+        "FP": 1605,
+        "TN": 7844,
+        "FN": 205
+      },
+      {
+        "Model": "GCN (165f Full)",
+        "Paradigm": "Static GNN",
+        "Feature_Space": "165f Full",
+        "Uses_Graph_Edges": "Yes (E=234k)",
+        "Parameters": "10754",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/gcn.pt",
+        "Checkpoint_Bytes": 45365,
+        "SHA256": "517f9102c28f44b0a18bcb349b6bb547948c5d71ed7a194f655d85ca81d3706d",
+        "AP_Primary": 0.1305679032543671,
+        "PR_AUC_Trapz": 0.1307596066088941,
+        "AP_minus_Trapz": -0.000191703354527,
+        "ROC_AUC": 0.7731755410120542,
+        "Precision_0.5": 0.1009358288770053,
+        "Recall_0.5": 0.8645038167938931,
+        "F1_0.5": 0.1807661612130885,
+        "TP": 453,
+        "FP": 4035,
+        "TN": 5414,
+        "FN": 71
+      },
+      {
+        "Model": "GAT Baseline (165f Full)",
+        "Paradigm": "Static GNN",
+        "Feature_Space": "165f Full",
+        "Uses_Graph_Edges": "Yes (E=234k)",
+        "Parameters": "10886",
+        "Cohort": "Historical",
+        "Checkpoint_Path": "results/checkpoints/gat.pt",
+        "Checkpoint_Bytes": 46805,
+        "SHA256": "6b6b9e06353d35743d2ae93ad0465b115716950e0666ebb105fbe73fbe6a4901",
+        "AP_Primary": 0.1155269796583104,
+        "PR_AUC_Trapz": 0.1150033821730952,
+        "AP_minus_Trapz": 0.0005235974852151,
+        "ROC_AUC": 0.754807649583663,
+        "Precision_0.5": 0.0892990305741983,
+        "Recall_0.5": 0.91412213740458,
+        "F1_0.5": 0.162703804347826,
+        "TP": 479,
+        "FP": 4885,
+        "TN": 4564,
+        "FN": 45
+      }
+    ]
+  },
+  "data_split": {
+    "data_files": [
+      "data\\processed\\final_test_probabilities.npz",
+      "data\\processed\\mapped_edges.csv",
+      "data\\processed\\nodes_with_masks.csv",
+      "data\\processed\\node_labels.csv",
+      "data\\processed\\node_mapping.csv",
+      "data\\processed\\precomputed_etgnn_gat_probs.meta.json",
+      "data\\processed\\precomputed_etgnn_gat_probs.npz",
+      "data\\processed\\scaled_features.npy",
+      "data\\processed\\test_graph.pt",
+      "data\\processed\\test_visible_edges.csv",
+      "data\\processed\\train_graph.pt",
+      "data\\processed\\train_scaler.joblib",
+      "data\\processed\\train_visible_edges.csv",
+      "data\\processed\\validation_graph.pt",
+      "data\\processed\\validation_visible_edges.csv",
+      "data\\raw\\elliptic\\elliptic_txs_classes.csv",
+      "data\\raw\\elliptic\\elliptic_txs_edgelist.csv",
+      "data\\raw\\elliptic\\elliptic_txs_features.csv",
+      "data\\processed\\elliptic_plusplus\\dataset_quality_manifest.json",
+      "data\\processed\\elliptic_plusplus\\test_graph.pt",
+      "data\\processed\\elliptic_plusplus\\train_graph.pt",
+      "data\\processed\\elliptic_plusplus\\train_scaler.joblib",
+      "data\\processed\\elliptic_plusplus\\validation_graph.pt",
+      "data\\external\\elliptic_plusplus\\AddrAddr_edgelist.csv",
+      "data\\external\\elliptic_plusplus\\download_provenance.json",
+      "data\\external\\elliptic_plusplus\\wallets_classes.csv",
+      "data\\external\\elliptic_plusplus\\wallets_features.csv"
+    ]
+  }
+}

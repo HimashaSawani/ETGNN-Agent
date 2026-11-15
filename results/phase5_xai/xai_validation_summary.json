@@ -1,0 +1,45 @@
+{
+  "cohort_size": 30,
+  "mean_e_cand": 10.333333333333334,
+  "fidelity_k1_abs_shift": {
+    "exact_oracle_mean": 0.054747174183527626,
+    "top1_ge_mean": 0.014978543917338053,
+    "rand1_mean": 0.01702274050977495,
+    "deg1_mean": 0.029839936892191568,
+    "bot1_ge_mean": 0.01158617933591207,
+    "top1_vs_rand1_diff": -0.0020441965924368963,
+    "top1_vs_rand1_p": 0.6827404611732979,
+    "top1_vs_bot1_diff": 0.0033923645814259848,
+    "top1_vs_bot1_p": 0.5152782253168104
+  },
+  "fidelity_k1_signed_drop": {
+    "exact_oracle_mean": 0.0070953945318857825,
+    "top1_ge_mean": 0.0034126798311869305,
+    "rand1_mean": -0.001757561299535963,
+    "bot1_ge_mean": -0.005211414893468221,
+    "top1_vs_rand1_p": 0.44292431360585627
+  },
+  "ego_residual_protection_bound": {
+    "empty_subgraph_mean_abs_shift": 0.07726810971895853,
+    "empty_subgraph_max_abs_shift": 0.33131033182144165
+  },
+  "oracle_alignment": {
+    "mean_spearman_ge_vs_oracle_abs": -0.12304002916677374,
+    "top1_oracle_hit_rate": 0.06666666666666667
+  },
+  "sparsity": {
+    "mean_normalized_entropy": 0.9377924340246714,
+    "mean_gini_sparsity": 0.2356158139853755
+  },
+  "stability": {
+    "intra_model_spearman_mean": 0.059534759358288766,
+    "intra_model_top2_jaccard_mean": 0.3466666666666667,
+    "inter_model_spearman_mean": 0.9968770053475936,
+    "inter_model_top2_jaccard_mean": 1.0
+  },
+  "computational_cost": {
+    "mean_gnnexplainer_ms": 260.47466666666674,
+    "mean_exact_oracle_ms": 13.693999999999999
+  },
+  "figure_path": "D:\\ETGNN-Fraud-Detection\\results\\figures\\phase5_xai_fidelity_and_stability.png"
+}

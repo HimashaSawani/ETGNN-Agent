@@ -1,0 +1,23 @@
+dataset: Elliptic Bitcoin Dataset
+
+temporal_split:
+  train_time_steps: [1, 32]
+  val_time_steps: [33, 40]
+  test_time_steps: [41, 49]
+
+models:
+  - Random Forest
+  - XGBoost
+  - GCN
+  - GraphSAGE
+  - GAT
+  - ETGNN
+
+metrics:
+  - Precision
+  - Recall
+  - F1
+  - ROC-AUC
+  - AUPRC
+
+random_seed: 42

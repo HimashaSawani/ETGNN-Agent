@@ -1,0 +1,2 @@
+register,mean_diff,iid_bootstrap_se,iid_95_ci,spatial_block_se,spatial_block_95_ci,ci_excludes_zero,vif
+ETGNN Primary TP-FP,0.0393431903090197,0.0095847803468459,"[0.0202, 0.0574]",0.013723316993694746,"[0.0124, 0.0662]",True,2.05

@@ -1,0 +1,23 @@
+{
+  "precision": 0.3068181818181818,
+  "recall": 0.7851373182552503,
+  "f1": 0.44121652292328645,
+  "roc_auc": 0.8991965174460721,
+  "auprc": 0.6610540216337096,
+  "tp": 486,
+  "fp": 1098,
+  "tn": 5936,
+  "fn": 133,
+  "run_id": "T1-11_93f_bidir_orig_s42",
+  "seed": 42,
+  "model_type": "etgnn",
+  "feat_dim": 93,
+  "connectivity": "bidirectional",
+  "weight_mode": "orig",
+  "weight_pos": 7.5061726570129395,
+  "best_epoch": 37,
+  "total_epochs": 45,
+  "wall_time_sec": 53.51,
+  "peak_ram_mb": 348.6,
+  "checkpoint_path": "D:\\ETGNN-Fraud-Detection\\results\\optimization_experiments\\checkpoints\\T1-11_93f_bidir_orig_s42.pt"
+}

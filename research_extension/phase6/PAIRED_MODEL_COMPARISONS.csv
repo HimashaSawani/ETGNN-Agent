@@ -1,0 +1,4 @@
+Comparison,Research_Question,Point_Estimate_Delta_AP,Standard_Error,95_CI_Lower,95_CI_Upper,P_Value,Clustered_SE,Clustered_95_CI_Lower,Clustered_95_CI_Upper,Significant_at_05
+Comparison A: ETGNN vs Matched GAT,Does sinusoidal time encoding provide a measurable improvement in held-out test AP?,0.015142931336714599,0.012298658207333309,-0.008302813144574919,0.03843955926953016,0.204,0.045013504075272576,-0.06393888427222652,0.10661361914610551,No
+Comparison B: XGBoost vs Random Forest,Which traditional ML baseline performs better on the test population?,-0.08504794800520044,0.011254605659703022,-0.10962386661102691,-0.06301420811956272,0.0,0.03147444884666541,-0.13168079841139324,-0.007348305924605491,Yes
+Comparison C: ETGNN vs GraphSAGE,How does proposed ETGNN compare against a strong spatial graph baseline?,-0.017620343419681272,0.01306118245946499,-0.04225887950098511,0.009694628614950913,0.178,0.03805696867816365,-0.06684967915345634,0.09475528852404176,No

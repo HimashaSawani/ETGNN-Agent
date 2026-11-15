@@ -1,0 +1,107 @@
+﻿===========================================================================
+ETGNN VALIDATION FEASIBILITY PILOT: EVIDENCE AUDIT AND VERIFICATION
+===========================================================================
+Active Artifact Directory: D:\ETGNN-Fraud-Detection\experiments\pilot_validation_audit_v2
+Loaded raw interventions: 700 trials across 20 unique nodes.
+Loaded pilot nodes:       20 nodes.
+Loaded candidate edges:   2712 rows.
+
+---------------------------------------------------------------------------
+CHECK 1: Candidate Edge Reconciliation (2,712 vs 2,544)
+---------------------------------------------------------------------------
+Per-Quadrant Candidate Edge Sums:
+  Quadrant FN: 159 edges
+  Quadrant FP: 544 edges
+  Quadrant TN: 1329 edges
+  Quadrant TP: 680 edges
+Total Candidate Edges: 2712
+Candidate Edges CSV Row Count: 2712
+[PASSED] Verified true candidate edge count is exactly 2,712.
+[EXPLANATION] '2,544' in the preliminary narrative report was a manual drafting addition error (diff: -168).
+
+---------------------------------------------------------------------------
+CHECK 2: Equal Intervention Budgets Verification (k = ceil(0.25 * E_cand))
+---------------------------------------------------------------------------
+[PASSED] All 700 intervention trials strictly used identical budget k = ceil(0.25 * E_cand).
+
+---------------------------------------------------------------------------
+CHECK 3: Selected-Edge Indexing and Subgraph Bounds Verification
+---------------------------------------------------------------------------
+[PASSED] All selected edge indices are unique, non-overlapping, and strictly bounded [0, E_cand).
+
+---------------------------------------------------------------------------
+CHECK 4: Original-Class Targeting & Signed Deletion Response Arithmetic
+---------------------------------------------------------------------------
+Targeted Original Class Alignment: [PASSED]
+Signed Deletion Drop Arithmetic Max Error: 3.14e-16 (Tolerance: 1e-6): [PASSED]
+
+---------------------------------------------------------------------------
+CHECK 5: Repetition Aggregation: Macro (Per-Node Mean) vs Micro (Pooled Trial)
+---------------------------------------------------------------------------
+               method  macro_mean_drop  macro_std_drop  pooled_mean_drop  pooled_std_drop  num_trials  num_nodes
+         gnnexplainer         0.121590        0.097322          0.121590         0.097235          60         20
+single_edge_occlusion         0.202679        0.095388          0.202679         0.095388          20         20
+    source_out_degree        -0.006170        0.123732         -0.006170         0.123732          20         20
+       uniform_random         0.008728        0.027051          0.008728         0.059411         600         20
+[PASSED] Macro and Micro aggregations clearly separated and reconciled.
+
+---------------------------------------------------------------------------
+CHECK 6: False Positive Correction Breakdown (Per-Transaction and Per-Seed)
+---------------------------------------------------------------------------
+ node_index  true_label  orig_predicted_class  orig_prob_illicit  pred_margin  seed_42_prob_del  seed_42_corrected  seed_43_prob_del  seed_43_corrected  seed_44_prob_del  seed_44_corrected  seeds_corrected_count  any_seed_corrected  majority_seed_corrected  all_seed_corrected
+     130690           0                     1           0.524847     0.024847          0.310203               True          0.309063               True          0.320279               True                      3                True                     True                True
+     130935           0                     1           0.572351     0.072351          0.324594               True          0.314517               True          0.327795               True                      3                True                     True                True
+     133801           0                     1           0.532906     0.032906          0.383367               True          0.363885               True          0.382852               True                      3                True                     True                True
+     136379           0                     1           0.514353     0.014353          0.414944               True          0.424935               True          0.450773               True                      3                True                     True                True
+     154421           0                     1           0.645266     0.145266          0.588300              False          0.487153               True          0.564609              False                      1                True                    False               False
+
+FP Repeated-Seed Trial Outcome: 13/15 runs corrected (86.7%)
+FP Transaction Any-Seed (>=1/3):   5/5 transactions (100.0%)
+FP Transaction Majority (>=2/3):   4/5 transactions (80.0%)
+FP Transaction All-Seed (3/3):     4/5 transactions (80.0%)
+[PASSED] Verified: 13/15 is a repeated-seed outcome across 5 transactions (4 all-seed, 1 seed-43 only).
+
+---------------------------------------------------------------------------
+CHECK 7: True Negative & True Positive Error-Induction Analysis
+---------------------------------------------------------------------------
+True Negative Error Induction per Node:
+ node_index  true_label  orig_predicted_class  orig_prob_licit  pred_margin  seed_42_prob_del  seed_42_induced  seed_43_prob_del  seed_43_induced  seed_44_prob_del  seed_44_induced  seeds_induced_count  any_seed_induced  majority_seed_induced  all_seed_induced
+     148195           0                     0         0.781729     0.281729          0.444122             True          0.443688             True          0.448401             True                    3              True                   True              True
+     148292           0                     0         0.709295     0.209295          0.532098            False          0.544724            False          0.559305            False                    0             False                  False             False
+     151484           0                     0         0.782560     0.282560          0.614911            False          0.600973            False          0.626722            False                    0             False                  False             False
+     154373           0                     0         0.758978     0.258978          0.596701            False          0.574103            False          0.573841            False                    0             False                  False             False
+     154471           0                     0         0.839939     0.339939          0.579258            False          0.602338            False          0.591472            False                    0             False                  False             False
+[PASSED] TN error induction verified: GNNExplainer induced errors in exactly 3/15 TN seed runs (Node 148195 across all 3 seeds).
+
+---------------------------------------------------------------------------
+CHECK 8: Prediction-Margin and Neighborhood-Size Distributions
+---------------------------------------------------------------------------
+quadrant  n_nodes  margin_mean  margin_min  margin_max  cand_edges_mean  cand_edges_min  cand_edges_max  in_degree_mean  in_degree_min  in_degree_max  subgraph_nodes_mean
+      TP        5     0.208507    0.069636    0.269856            136.0              72             233           101.4             53            177                113.6
+      FP        5     0.057945    0.014353    0.145266            108.8              61             153            52.2             40             65                103.0
+      FN        5     0.283084    0.048057    0.486446             31.8               6              81            20.4              5             43                 32.6
+      TN        5     0.274500    0.209295    0.339939            265.8             154             367           154.0            124            241                242.6
+
+FP Mean Prediction Margin: 0.0579 (tightly clustered near 0.50 threshold)
+FN Mean Prediction Margin: 0.2831 (much further from 0.50 threshold)
+[PASSED] Quadrant distributional characteristics computed.
+
+---------------------------------------------------------------------------
+CHECK 9: Jaccard Stability: GNNExplainer vs. Exact Random Reference Baseline
+---------------------------------------------------------------------------
+Jaccard Stability Comparison by Quadrant:
+      ge_jaccard_similarity  rnd_empirical_jaccard  rnd_exact_expected_jaccard  jaccard_advantage_over_random
+case                                                                                                         
+FN                 0.322084               0.178107                    0.178649                       0.143977
+FP                 0.407479               0.148300                    0.147889                       0.259179
+TN                 0.547026               0.144217                    0.144817                       0.402809
+TP                 0.204116               0.147512                    0.147399                       0.056604
+
+Overall GNNExplainer Jaccard:       0.3702
+Overall Random Empirical Jaccard:   0.1545
+Overall Exact Expected Jaccard:     0.1547
+[PASSED] Jaccard stability evaluated against exact hypergeometric expectation (0.1547) and empirical draws (0.1545).
+
+===========================================================================
+AUDIT SUMMARY STATUS: ALL CHECKS PASSED
+===========================================================================

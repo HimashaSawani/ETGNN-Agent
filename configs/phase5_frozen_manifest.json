@@ -1,0 +1,105 @@
+{
+  "manifest_id": "ETGNN-PHASE5-FROZEN-PROTOCOL-V1",
+  "freeze_timestamp_iso": "2026-10-27T11:52:00+05:30",
+  "git_provenance": {
+    "branch": "main",
+    "head_commit_sha": "8782a5bbe6ffcf74e5ba835b5b45e103b376c00b"
+  },
+  "environment_lock": {
+    "os": "Windows 10/11 64-bit",
+    "python_version": "3.13.3",
+    "torch_version": "2.14.0+cpu",
+    "torch_geometric_version": "2.8.0.post1",
+    "numpy_version": "2.5.3",
+    "pandas_version": "3.0.6",
+    "scikit_learn_version": "1.9.1",
+    "cpu_threads": 2
+  },
+  "frozen_artifact_sha256": {
+    "data/processed/train_graph.pt": "2f77f1e0d94c4aa81e21293c089a9a2df7d9cd099db5f4669213cce0f92e8fc4",
+    "data/processed/validation_graph.pt": "261b7ee5951d386bee9843adfc2471726ec9f433341d7c4359c7f66e44cbfc71",
+    "results/checkpoints/etgnn.pt": "b2f5535f3b6b1675109dae205934e761d2ad1b80b5409564bbe5889edb79dadc",
+    "research_extension/PHASE4_EXPERIMENT_MATRIX.csv": "1576d3cb64b907cfde1f3d3885de22f0e184c48fa831dfddd3e6ea30aed75172"
+  },
+  "external_evaluation_protocol": {
+    "protocol_type": "Protocol_B_External_Benchmark_Retraining",
+    "dataset_name": "Elliptic++ Actors (Wallet Address Interaction Graph)",
+    "provenance_classification": "Partially Overlapping (Shared Bitcoin 49-step historical window; distinct actor entity space, AddrAddr topology, and 56-d wallet feature space)",
+    "expected_feature_dim": 56,
+    "time_encoding_dim": 16,
+    "chronological_split": {
+      "train_steps": [1, 32],
+      "val_steps": [33, 40],
+      "test_steps": [41, 49]
+    },
+    "preprocessing_rules": {
+      "scaler": "StandardScaler fitted strictly on train_mask (steps 1..32)",
+      "missing_value_imputation": "0.0 post-scaling (training mean)",
+      "label_mapping": {
+        "1_illicit": 1,
+        "2_licit": 0,
+        "3_unknown": -1
+      },
+      "self_loops_removed_before_rewiring": true,
+      "multi_edges_deduplicated": true
+    },
+    "conditions": {
+      "A": {
+        "name": "Feature-Only Deep MLP",
+        "class": "DeepParameterMatchedMLP",
+        "hidden_dim1": 128,
+        "hidden_dim2": 64,
+        "dropout": 0.3,
+        "edges": "empty"
+      },
+      "B": {
+        "name": "Residual ETGNN (True Graph)",
+        "class": "ResidualETGNNClassifier",
+        "hidden_dim": 64,
+        "heads_l1": 4,
+        "heads_l2": 1,
+        "dropout": 0.3,
+        "edges": "true"
+      },
+      "C": {
+        "name": "Residual ETGNN (Empty Edges)",
+        "class": "ResidualETGNNClassifier",
+        "hidden_dim": 64,
+        "heads_l1": 4,
+        "heads_l2": 1,
+        "dropout": 0.3,
+        "edges": "empty"
+      },
+      "D": {
+        "name": "Residual ETGNN (Degree-Preserving Rewired)",
+        "class": "ResidualETGNNClassifier",
+        "hidden_dim": 64,
+        "heads_l1": 4,
+        "heads_l2": 1,
+        "dropout": 0.3,
+        "edges": "rewired_within_timestep",
+        "rewire_swaps_factor": 5
+      }
+    },
+    "training_hyperparameters": {
+      "optimizer": "Adam",
+      "learning_rate": 0.01,
+      "weight_decay": 0.0005,
+      "max_epochs": 50,
+      "early_stopping_patience": 8,
+      "early_stopping_min_delta": 0.0001,
+      "early_stopping_metric": "val_auprc",
+      "class_weight_rule": "dynamic_train_licit_over_illicit_ratio"
+    },
+    "frozen_seeds": [42, 43, 44, 45, 46],
+    "statistical_plan": {
+      "primary_metric": "auprc",
+      "secondary_metrics": ["val_calibrated_f1", "f1_at_0_5", "precision", "recall", "roc_auc", "wall_time_sec", "peak_ram_mb", "inference_latency_ms"],
+      "primary_contrasts": ["B_vs_D_rewired", "B_vs_C_empty", "B_vs_A_mlp"],
+      "multiplicity_correction": "Holm-Bonferroni (m=3 primary external contrasts)",
+      "alpha": 0.05,
+      "practical_significance_delta": 0.020
+    }
+  }
+}
+

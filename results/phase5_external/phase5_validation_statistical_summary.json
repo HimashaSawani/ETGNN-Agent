@@ -1,0 +1,1133 @@
+{
+  "split": "validation_steps_33_to_40",
+  "dataset": "Elliptic++ Actors (56 features, chronological split)",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "conditions": {
+    "A": {
+      "condition": "A",
+      "description": "DeepParameterMatchedMLP (Feature-Only)",
+      "n_seeds": 5,
+      "param_count": 17730,
+      "metrics": {
+        "auprc": {
+          "mean": 0.445055,
+          "sd": 0.008662,
+          "ci95_low": 0.434299,
+          "ci95_high": 0.455811,
+          "median": 0.442655,
+          "iqr": 0.005128,
+          "min": 0.438874,
+          "max": 0.459984,
+          "seed_values": [
+            0.444444,
+            0.459984,
+            0.438874,
+            0.442655,
+            0.439316
+          ]
+        },
+        "unseen_auprc": {
+          "mean": 0.452805,
+          "sd": 0.00797,
+          "ci95_low": 0.442909,
+          "ci95_high": 0.462702,
+          "median": 0.450724,
+          "iqr": 0.003653,
+          "min": 0.446503,
+          "max": 0.466553,
+          "seed_values": [
+            0.450724,
+            0.466553,
+            0.448296,
+            0.451949,
+            0.446503
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.899177,
+          "sd": 0.018354,
+          "ci95_low": 0.876387,
+          "ci95_high": 0.921967,
+          "median": 0.905047,
+          "iqr": 0.025271,
+          "min": 0.873232,
+          "max": 0.917013,
+          "seed_values": [
+            0.912931,
+            0.917013,
+            0.873232,
+            0.88766,
+            0.905047
+          ]
+        },
+        "f1": {
+          "mean": 0.186925,
+          "sd": 0.072077,
+          "ci95_low": 0.097429,
+          "ci95_high": 0.276421,
+          "median": 0.164281,
+          "iqr": 0.017774,
+          "min": 0.141326,
+          "max": 0.314484,
+          "seed_values": [
+            0.166153,
+            0.314484,
+            0.141326,
+            0.148379,
+            0.164281
+          ]
+        },
+        "val_calibrated_f1": {
+          "mean": 0.570583,
+          "sd": 0.028017,
+          "ci95_low": 0.535795,
+          "ci95_high": 0.60537,
+          "median": 0.580363,
+          "iqr": 0.02113,
+          "min": 0.526202,
+          "max": 0.599479,
+          "seed_values": [
+            0.599479,
+            0.580363,
+            0.56287,
+            0.526202,
+            0.584
+          ]
+        },
+        "precision": {
+          "mean": 0.10535,
+          "sd": 0.047672,
+          "ci95_low": 0.046157,
+          "ci95_high": 0.164543,
+          "median": 0.089619,
+          "iqr": 0.010371,
+          "min": 0.076187,
+          "max": 0.189918,
+          "seed_values": [
+            0.090698,
+            0.189918,
+            0.076187,
+            0.080327,
+            0.089619
+          ]
+        },
+        "recall": {
+          "mean": 0.9665,
+          "sd": 0.030249,
+          "ci95_low": 0.928941,
+          "ci95_high": 1.004058,
+          "median": 0.974641,
+          "iqr": 0.013347,
+          "min": 0.913914,
+          "max": 0.988655,
+          "seed_values": [
+            0.988655,
+            0.913914,
+            0.974641,
+            0.970971,
+            0.984318
+          ]
+        },
+        "inference_latency_ms": {
+          "mean": 71.877,
+          "sd": 28.056642,
+          "ci95_low": 37.040078,
+          "ci95_high": 106.713922,
+          "median": 77.907,
+          "iqr": 23.888,
+          "min": 32.749,
+          "max": 107.821,
+          "seed_values": [
+            107.821,
+            82.398,
+            77.907,
+            32.749,
+            58.51
+          ]
+        },
+        "peak_ram_mb": {
+          "mean": 293.14,
+          "sd": 221.061605,
+          "ci95_low": 18.655764,
+          "ci95_high": 567.624236,
+          "median": 151.7,
+          "iqr": 275.1,
+          "min": 120.8,
+          "max": 621.5,
+          "seed_values": [
+            621.5,
+            148.3,
+            120.8,
+            423.4,
+            151.7
+          ]
+        },
+        "wall_time_sec": {
+          "mean": 36.3868,
+          "sd": 17.5096,
+          "ci95_low": 14.645761,
+          "ci95_high": 58.127839,
+          "median": 33.981,
+          "iqr": 6.349,
+          "min": 14.354,
+          "max": 63.078,
+          "seed_values": [
+            63.078,
+            38.435,
+            33.981,
+            14.354,
+            32.086
+          ]
+        }
+      }
+    },
+    "B": {
+      "condition": "B",
+      "description": "ResidualETGNNClassifier (True AddrAddr Graph)",
+      "n_seeds": 5,
+      "param_count": 9736,
+      "metrics": {
+        "auprc": {
+          "mean": 0.480254,
+          "sd": 0.071904,
+          "ci95_low": 0.390974,
+          "ci95_high": 0.569534,
+          "median": 0.50404,
+          "iqr": 0.056591,
+          "min": 0.36819,
+          "max": 0.556992,
+          "seed_values": [
+            0.457728,
+            0.50404,
+            0.556992,
+            0.514319,
+            0.36819
+          ]
+        },
+        "unseen_auprc": {
+          "mean": 0.486829,
+          "sd": 0.072624,
+          "ci95_low": 0.396655,
+          "ci95_high": 0.577003,
+          "median": 0.508529,
+          "iqr": 0.054757,
+          "min": 0.373625,
+          "max": 0.565776,
+          "seed_values": [
+            0.465729,
+            0.508529,
+            0.565776,
+            0.520486,
+            0.373625
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.927152,
+          "sd": 0.01694,
+          "ci95_low": 0.906118,
+          "ci95_high": 0.948185,
+          "median": 0.934314,
+          "iqr": 0.006266,
+          "min": 0.897793,
+          "max": 0.940369,
+          "seed_values": [
+            0.928508,
+            0.934774,
+            0.940369,
+            0.934314,
+            0.897793
+          ]
+        },
+        "f1": {
+          "mean": 0.318821,
+          "sd": 0.077975,
+          "ci95_low": 0.222002,
+          "ci95_high": 0.41564,
+          "median": 0.331845,
+          "iqr": 0.035726,
+          "min": 0.195452,
+          "max": 0.408733,
+          "seed_values": [
+            0.331845,
+            0.346901,
+            0.408733,
+            0.311174,
+            0.195452
+          ]
+        },
+        "val_calibrated_f1": {
+          "mean": 0.570754,
+          "sd": 0.046283,
+          "ci95_low": 0.513286,
+          "ci95_high": 0.628222,
+          "median": 0.590071,
+          "iqr": 0.054508,
+          "min": 0.51135,
+          "max": 0.626109,
+          "seed_values": [
+            0.535866,
+            0.590374,
+            0.626109,
+            0.590071,
+            0.51135
+          ]
+        },
+        "precision": {
+          "mean": 0.194576,
+          "sd": 0.056421,
+          "ci95_low": 0.124521,
+          "ci95_high": 0.264632,
+          "median": 0.200828,
+          "iqr": 0.02676,
+          "min": 0.108523,
+          "max": 0.264443,
+          "seed_values": [
+            0.200828,
+            0.212924,
+            0.264443,
+            0.186164,
+            0.108523
+          ]
+        },
+        "recall": {
+          "mean": 0.943877,
+          "sd": 0.030152,
+          "ci95_low": 0.906439,
+          "ci95_high": 0.981315,
+          "median": 0.947281,
+          "iqr": 0.019019,
+          "min": 0.899566,
+          "max": 0.982316,
+          "seed_values": [
+            0.954621,
+            0.935602,
+            0.899566,
+            0.947281,
+            0.982316
+          ]
+        },
+        "inference_latency_ms": {
+          "mean": 424.3702,
+          "sd": 70.310131,
+          "ci95_low": 337.068642,
+          "ci95_high": 511.671758,
+          "median": 441.206,
+          "iqr": 105.273,
+          "min": 330.722,
+          "max": 496.254,
+          "seed_values": [
+            479.471,
+            496.254,
+            374.198,
+            330.722,
+            441.206
+          ]
+        },
+        "peak_ram_mb": {
+          "mean": 214.62,
+          "sd": 54.95591,
+          "ci95_low": 146.383226,
+          "ci95_high": 282.856774,
+          "median": 242.0,
+          "iqr": 84.9,
+          "min": 142.4,
+          "max": 264.6,
+          "seed_values": [
+            264.6,
+            254.5,
+            142.4,
+            242.0,
+            169.6
+          ]
+        },
+        "wall_time_sec": {
+          "mean": 174.597,
+          "sd": 94.546865,
+          "ci95_low": 57.201562,
+          "ci95_high": 291.992438,
+          "median": 144.572,
+          "iqr": 92.306,
+          "min": 89.352,
+          "max": 325.267,
+          "seed_values": [
+            110.744,
+            325.267,
+            203.05,
+            144.572,
+            89.352
+          ]
+        }
+      }
+    },
+    "C": {
+      "condition": "C",
+      "description": "ResidualETGNNClassifier (Empty Graph Control)",
+      "n_seeds": 5,
+      "param_count": 9736,
+      "metrics": {
+        "auprc": {
+          "mean": 0.437801,
+          "sd": 0.012934,
+          "ci95_low": 0.421741,
+          "ci95_high": 0.45386,
+          "median": 0.436248,
+          "iqr": 0.015211,
+          "min": 0.423549,
+          "max": 0.456352,
+          "seed_values": [
+            0.423549,
+            0.444032,
+            0.436248,
+            0.456352,
+            0.428821
+          ]
+        },
+        "unseen_auprc": {
+          "mean": 0.445751,
+          "sd": 0.012641,
+          "ci95_low": 0.430055,
+          "ci95_high": 0.461446,
+          "median": 0.443161,
+          "iqr": 0.00777,
+          "min": 0.428962,
+          "max": 0.463619,
+          "seed_values": [
+            0.428962,
+            0.45039,
+            0.442621,
+            0.463619,
+            0.443161
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.91202,
+          "sd": 0.005132,
+          "ci95_low": 0.905648,
+          "ci95_high": 0.918391,
+          "median": 0.91358,
+          "iqr": 0.007644,
+          "min": 0.905327,
+          "max": 0.917392,
+          "seed_values": [
+            0.917392,
+            0.91358,
+            0.905327,
+            0.915721,
+            0.908077
+          ]
+        },
+        "f1": {
+          "mean": 0.188528,
+          "sd": 0.030893,
+          "ci95_low": 0.150169,
+          "ci95_high": 0.226887,
+          "median": 0.174333,
+          "iqr": 0.020602,
+          "min": 0.167038,
+          "max": 0.241391,
+          "seed_values": [
+            0.174333,
+            0.167038,
+            0.241391,
+            0.169637,
+            0.190239
+          ]
+        },
+        "val_calibrated_f1": {
+          "mean": 0.569974,
+          "sd": 0.018865,
+          "ci95_low": 0.546549,
+          "ci95_high": 0.593398,
+          "median": 0.566961,
+          "iqr": 0.016233,
+          "min": 0.546717,
+          "max": 0.597203,
+          "seed_values": [
+            0.57761,
+            0.566961,
+            0.561377,
+            0.597203,
+            0.546717
+          ]
+        },
+        "precision": {
+          "mean": 0.104678,
+          "sd": 0.019577,
+          "ci95_low": 0.08037,
+          "ci95_high": 0.128986,
+          "median": 0.095611,
+          "iqr": 0.012671,
+          "min": 0.091234,
+          "max": 0.138269,
+          "seed_values": [
+            0.095611,
+            0.091234,
+            0.138269,
+            0.092802,
+            0.105473
+          ]
+        },
+        "recall": {
+          "mean": 0.975843,
+          "sd": 0.016596,
+          "ci95_low": 0.955236,
+          "ci95_high": 0.996449,
+          "median": 0.985986,
+          "iqr": 0.018018,
+          "min": 0.949616,
+          "max": 0.987654,
+          "seed_values": [
+            0.986987,
+            0.987654,
+            0.949616,
+            0.985986,
+            0.968969
+          ]
+        },
+        "inference_latency_ms": {
+          "mean": 102.2962,
+          "sd": 39.330357,
+          "ci95_low": 53.461112,
+          "ci95_high": 151.131288,
+          "median": 102.615,
+          "iqr": 48.633,
+          "min": 60.572,
+          "max": 158.465,
+          "seed_values": [
+            102.615,
+            60.572,
+            158.465,
+            70.598,
+            119.231
+          ]
+        },
+        "peak_ram_mb": {
+          "mean": 121.42,
+          "sd": 13.212759,
+          "ci95_low": 105.014193,
+          "ci95_high": 137.825807,
+          "median": 126.2,
+          "iqr": 22.4,
+          "min": 107.2,
+          "max": 135.9,
+          "seed_values": [
+            135.9,
+            130.1,
+            107.2,
+            126.2,
+            107.7
+          ]
+        },
+        "wall_time_sec": {
+          "mean": 31.9438,
+          "sd": 8.314936,
+          "ci95_low": 21.619443,
+          "ci95_high": 42.268157,
+          "median": 35.281,
+          "iqr": 13.723,
+          "min": 21.243,
+          "max": 39.476,
+          "seed_values": [
+            38.721,
+            39.476,
+            24.998,
+            35.281,
+            21.243
+          ]
+        }
+      }
+    },
+    "D": {
+      "condition": "D",
+      "description": "ResidualETGNNClassifier (Degree-Preserving Rewired Graph)",
+      "n_seeds": 5,
+      "param_count": 9736,
+      "metrics": {
+        "auprc": {
+          "mean": 0.41081,
+          "sd": 0.061864,
+          "ci95_low": 0.333995,
+          "ci95_high": 0.487624,
+          "median": 0.434617,
+          "iqr": 0.021561,
+          "min": 0.304115,
+          "max": 0.46204,
+          "seed_values": [
+            0.415858,
+            0.434617,
+            0.46204,
+            0.437418,
+            0.304115
+          ]
+        },
+        "unseen_auprc": {
+          "mean": 0.416123,
+          "sd": 0.061343,
+          "ci95_low": 0.339955,
+          "ci95_high": 0.492291,
+          "median": 0.440997,
+          "iqr": 0.019914,
+          "min": 0.310304,
+          "max": 0.466956,
+          "seed_values": [
+            0.421223,
+            0.440997,
+            0.466956,
+            0.441137,
+            0.310304
+          ]
+        },
+        "roc_auc": {
+          "mean": 0.887866,
+          "sd": 0.038807,
+          "ci95_low": 0.83968,
+          "ci95_high": 0.936051,
+          "median": 0.908028,
+          "iqr": 0.024978,
+          "min": 0.821606,
+          "max": 0.914975,
+          "seed_values": [
+            0.909849,
+            0.884872,
+            0.908028,
+            0.914975,
+            0.821606
+          ]
+        },
+        "f1": {
+          "mean": 0.193724,
+          "sd": 0.015522,
+          "ci95_low": 0.174451,
+          "ci95_high": 0.212997,
+          "median": 0.199634,
+          "iqr": 0.020583,
+          "min": 0.172062,
+          "max": 0.209463,
+          "seed_values": [
+            0.199634,
+            0.209463,
+            0.183439,
+            0.204022,
+            0.172062
+          ]
+        },
+        "val_calibrated_f1": {
+          "mean": 0.532851,
+          "sd": 0.058945,
+          "ci95_low": 0.459662,
+          "ci95_high": 0.606041,
+          "median": 0.555639,
+          "iqr": 0.019702,
+          "min": 0.428707,
+          "max": 0.569358,
+          "seed_values": [
+            0.545425,
+            0.569358,
+            0.565127,
+            0.555639,
+            0.428707
+          ]
+        },
+        "precision": {
+          "mean": 0.107854,
+          "sd": 0.009482,
+          "ci95_low": 0.096081,
+          "ci95_high": 0.119627,
+          "median": 0.111115,
+          "iqr": 0.012406,
+          "min": 0.094865,
+          "max": 0.118013,
+          "seed_values": [
+            0.111115,
+            0.118013,
+            0.101435,
+            0.113841,
+            0.094865
+          ]
+        },
+        "recall": {
+          "mean": 0.955088,
+          "sd": 0.027333,
+          "ci95_low": 0.92115,
+          "ci95_high": 0.989027,
+          "median": 0.957624,
+          "iqr": 0.051051,
+          "min": 0.923924,
+          "max": 0.981648,
+          "seed_values": [
+            0.981648,
+            0.930597,
+            0.957624,
+            0.981648,
+            0.923924
+          ]
+        },
+        "inference_latency_ms": {
+          "mean": 602.8656,
+          "sd": 309.777909,
+          "ci95_low": 218.225523,
+          "ci95_high": 987.505677,
+          "median": 624.868,
+          "iqr": 365.04,
+          "min": 292.242,
+          "max": 1057.294,
+          "seed_values": [
+            624.868,
+            702.482,
+            292.242,
+            337.442,
+            1057.294
+          ]
+        },
+        "peak_ram_mb": {
+          "mean": 192.6,
+          "sd": 86.750735,
+          "ci95_low": 84.884736,
+          "ci95_high": 300.315264,
+          "median": 151.9,
+          "iqr": 33.0,
+          "min": 142.2,
+          "max": 345.7,
+          "seed_values": [
+            145.1,
+            151.9,
+            345.7,
+            178.1,
+            142.2
+          ]
+        },
+        "wall_time_sec": {
+          "mean": 289.7386,
+          "sd": 107.771243,
+          "ci95_low": 155.922927,
+          "ci95_high": 423.554273,
+          "median": 274.956,
+          "iqr": 93.34,
+          "min": 140.757,
+          "max": 428.978,
+          "seed_values": [
+            274.956,
+            428.978,
+            255.331,
+            348.671,
+            140.757
+          ]
+        }
+      }
+    }
+  },
+  "contrasts_auprc": [
+    {
+      "contrast_id": "B_vs_D_rewired",
+      "metric": "auprc",
+      "comparison": "B - D",
+      "description": "True AddrAddr Topology vs. Degree-Preserving Rewired Null",
+      "is_primary_family": true,
+      "mean_diff": 0.069444,
+      "sd_diff": 0.019335,
+      "ci95_low": 0.045436,
+      "ci95_high": 0.093452,
+      "t_stat": 8.0311,
+      "p_raw": 0.001305,
+      "cohen_dz": 3.5916,
+      "seed_diffs": [
+        0.04187,
+        0.069423,
+        0.094952,
+        0.0769,
+        0.064076
+      ],
+      "sign_concordance": "5+ / 0- (of 5)",
+      "p_holm": 0.003915,
+      "statistically_significant_holm_005": true,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "B_vs_C_empty",
+      "metric": "auprc",
+      "comparison": "B - C",
+      "description": "True AddrAddr Topology vs. Empty-Edge Ablation",
+      "is_primary_family": true,
+      "mean_diff": 0.042453,
+      "sd_diff": 0.065903,
+      "ci95_low": -0.039377,
+      "ci95_high": 0.124283,
+      "t_stat": 1.4404,
+      "p_raw": 0.223179,
+      "cohen_dz": 0.6442,
+      "seed_diffs": [
+        0.034179,
+        0.060008,
+        0.120744,
+        0.057966,
+        -0.060631
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.446358,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "B_vs_A_mlp",
+      "metric": "auprc",
+      "comparison": "B - A",
+      "description": "Residual ETGNN (True Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": true,
+      "mean_diff": 0.035199,
+      "sd_diff": 0.070832,
+      "ci95_low": -0.052751,
+      "ci95_high": 0.123149,
+      "t_stat": 1.1112,
+      "p_raw": 0.328782,
+      "cohen_dz": 0.4969,
+      "seed_diffs": [
+        0.013283,
+        0.044056,
+        0.118118,
+        0.071663,
+        -0.071126
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.446358,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "C_vs_A_empty_vs_mlp",
+      "metric": "auprc",
+      "comparison": "C - A",
+      "description": "Residual ETGNN (Empty Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": false,
+      "mean_diff": -0.007254,
+      "sd_diff": 0.013533,
+      "ci95_low": -0.024058,
+      "ci95_high": 0.00955,
+      "t_stat": -1.1986,
+      "p_raw": 0.29684,
+      "cohen_dz": -0.536,
+      "seed_diffs": [
+        -0.020896,
+        -0.015952,
+        -0.002626,
+        0.013697,
+        -0.010495
+      ],
+      "sign_concordance": "1+ / 4- (of 5)",
+      "p_holm": null,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    }
+  ],
+  "contrasts_unseen_auprc": [
+    {
+      "contrast_id": "B_vs_D_rewired",
+      "metric": "unseen_auprc",
+      "comparison": "B - D",
+      "description": "True AddrAddr Topology vs. Degree-Preserving Rewired Null",
+      "is_primary_family": true,
+      "mean_diff": 0.070706,
+      "sd_diff": 0.020101,
+      "ci95_low": 0.045747,
+      "ci95_high": 0.095664,
+      "t_stat": 7.8654,
+      "p_raw": 0.001412,
+      "cohen_dz": 3.5175,
+      "seed_diffs": [
+        0.044506,
+        0.067531,
+        0.098821,
+        0.07935,
+        0.063321
+      ],
+      "sign_concordance": "5+ / 0- (of 5)",
+      "p_holm": 0.004236,
+      "statistically_significant_holm_005": true,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "B_vs_C_empty",
+      "metric": "unseen_auprc",
+      "comparison": "B - C",
+      "description": "True AddrAddr Topology vs. Empty-Edge Ablation",
+      "is_primary_family": true,
+      "mean_diff": 0.041079,
+      "sd_diff": 0.069877,
+      "ci95_low": -0.045685,
+      "ci95_high": 0.127842,
+      "t_stat": 1.3145,
+      "p_raw": 0.258979,
+      "cohen_dz": 0.5879,
+      "seed_diffs": [
+        0.036767,
+        0.058139,
+        0.123156,
+        0.056868,
+        -0.069537
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.517958,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "B_vs_A_mlp",
+      "metric": "unseen_auprc",
+      "comparison": "B - A",
+      "description": "Residual ETGNN (True Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": true,
+      "mean_diff": 0.034024,
+      "sd_diff": 0.070727,
+      "ci95_low": -0.053795,
+      "ci95_high": 0.121843,
+      "t_stat": 1.0757,
+      "p_raw": 0.342625,
+      "cohen_dz": 0.4811,
+      "seed_diffs": [
+        0.015005,
+        0.041976,
+        0.11748,
+        0.068537,
+        -0.072878
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.517958,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "C_vs_A_empty_vs_mlp",
+      "metric": "unseen_auprc",
+      "comparison": "C - A",
+      "description": "Residual ETGNN (Empty Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": false,
+      "mean_diff": -0.007055,
+      "sd_diff": 0.012899,
+      "ci95_low": -0.023071,
+      "ci95_high": 0.008962,
+      "t_stat": -1.2229,
+      "p_raw": 0.288486,
+      "cohen_dz": -0.5469,
+      "seed_diffs": [
+        -0.021763,
+        -0.016163,
+        -0.005676,
+        0.01167,
+        -0.003342
+      ],
+      "sign_concordance": "1+ / 4- (of 5)",
+      "p_holm": null,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    }
+  ],
+  "contrasts_val_calibrated_f1": [
+    {
+      "contrast_id": "B_vs_D_rewired",
+      "metric": "val_calibrated_f1",
+      "comparison": "B - D",
+      "description": "True AddrAddr Topology vs. Degree-Preserving Rewired Null",
+      "is_primary_family": true,
+      "mean_diff": 0.037903,
+      "sd_diff": 0.035652,
+      "ci95_low": -0.006365,
+      "ci95_high": 0.08217,
+      "t_stat": 2.3773,
+      "p_raw": 0.076216,
+      "cohen_dz": 1.0631,
+      "seed_diffs": [
+        -0.009559,
+        0.021016,
+        0.060982,
+        0.034432,
+        0.082643
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.228648,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "B_vs_C_empty",
+      "metric": "val_calibrated_f1",
+      "comparison": "B - C",
+      "description": "True AddrAddr Topology vs. Empty-Edge Ablation",
+      "is_primary_family": true,
+      "mean_diff": 0.00078,
+      "sd_diff": 0.044101,
+      "ci95_low": -0.053979,
+      "ci95_high": 0.055539,
+      "t_stat": 0.0396,
+      "p_raw": 0.970335,
+      "cohen_dz": 0.0177,
+      "seed_diffs": [
+        -0.041744,
+        0.023413,
+        0.064732,
+        -0.007132,
+        -0.035367
+      ],
+      "sign_concordance": "2+ / 3- (of 5)",
+      "p_holm": 1.0,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    },
+    {
+      "contrast_id": "B_vs_A_mlp",
+      "metric": "val_calibrated_f1",
+      "comparison": "B - A",
+      "description": "Residual ETGNN (True Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": true,
+      "mean_diff": 0.000171,
+      "sd_diff": 0.06615,
+      "ci95_low": -0.081964,
+      "ci95_high": 0.082307,
+      "t_stat": 0.0058,
+      "p_raw": 0.995657,
+      "cohen_dz": 0.0026,
+      "seed_diffs": [
+        -0.063613,
+        0.010011,
+        0.063239,
+        0.063869,
+        -0.07265
+      ],
+      "sign_concordance": "3+ / 2- (of 5)",
+      "p_holm": 1.0,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    },
+    {
+      "contrast_id": "C_vs_A_empty_vs_mlp",
+      "metric": "val_calibrated_f1",
+      "comparison": "C - A",
+      "description": "Residual ETGNN (Empty Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": false,
+      "mean_diff": -0.000609,
+      "sd_diff": 0.0421,
+      "ci95_low": -0.052883,
+      "ci95_high": 0.051664,
+      "t_stat": -0.0323,
+      "p_raw": 0.975743,
+      "cohen_dz": -0.0145,
+      "seed_diffs": [
+        -0.021868,
+        -0.013402,
+        -0.001493,
+        0.071002,
+        -0.037283
+      ],
+      "sign_concordance": "1+ / 4- (of 5)",
+      "p_holm": null,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    }
+  ],
+  "contrasts_roc_auc": [
+    {
+      "contrast_id": "B_vs_D_rewired",
+      "metric": "roc_auc",
+      "comparison": "B - D",
+      "description": "True AddrAddr Topology vs. Degree-Preserving Rewired Null",
+      "is_primary_family": true,
+      "mean_diff": 0.039286,
+      "sd_diff": 0.024218,
+      "ci95_low": 0.009215,
+      "ci95_high": 0.069356,
+      "t_stat": 3.6273,
+      "p_raw": 0.022213,
+      "cohen_dz": 1.6222,
+      "seed_diffs": [
+        0.018658,
+        0.049902,
+        0.032342,
+        0.019339,
+        0.076187
+      ],
+      "sign_concordance": "5+ / 0- (of 5)",
+      "p_holm": 0.066639,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "B_vs_C_empty",
+      "metric": "roc_auc",
+      "comparison": "B - C",
+      "description": "True AddrAddr Topology vs. Empty-Edge Ablation",
+      "is_primary_family": true,
+      "mean_diff": 0.015132,
+      "sd_diff": 0.016638,
+      "ci95_low": -0.005527,
+      "ci95_high": 0.035791,
+      "t_stat": 2.0337,
+      "p_raw": 0.111742,
+      "cohen_dz": 0.9095,
+      "seed_diffs": [
+        0.011116,
+        0.021193,
+        0.035043,
+        0.018592,
+        -0.010284
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.195668,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    },
+    {
+      "contrast_id": "B_vs_A_mlp",
+      "metric": "roc_auc",
+      "comparison": "B - A",
+      "description": "Residual ETGNN (True Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": true,
+      "mean_diff": 0.027975,
+      "sd_diff": 0.029076,
+      "ci95_low": -0.008128,
+      "ci95_high": 0.064078,
+      "t_stat": 2.1513,
+      "p_raw": 0.097834,
+      "cohen_dz": 0.9621,
+      "seed_diffs": [
+        0.015576,
+        0.017761,
+        0.067137,
+        0.046653,
+        -0.007254
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": 0.195668,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": true
+    },
+    {
+      "contrast_id": "C_vs_A_empty_vs_mlp",
+      "metric": "roc_auc",
+      "comparison": "C - A",
+      "description": "Residual ETGNN (Empty Graph) vs. Feature-Only Deep MLP",
+      "is_primary_family": false,
+      "mean_diff": 0.012843,
+      "sd_diff": 0.016075,
+      "ci95_low": -0.007117,
+      "ci95_high": 0.032803,
+      "t_stat": 1.7864,
+      "p_raw": 0.148571,
+      "cohen_dz": 0.7989,
+      "seed_diffs": [
+        0.004461,
+        -0.003433,
+        0.032094,
+        0.028061,
+        0.00303
+      ],
+      "sign_concordance": "4+ / 1- (of 5)",
+      "p_holm": null,
+      "statistically_significant_holm_005": false,
+      "practically_significant_002": false
+    }
+  ]
+}

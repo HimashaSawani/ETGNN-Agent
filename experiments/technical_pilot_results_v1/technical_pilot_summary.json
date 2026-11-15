@@ -1,0 +1,13 @@
+{
+  "device": "cuda",
+  "cuda_available": true,
+  "gpu_name": "Tesla T4",
+  "benchmark_nodes_count": 4,
+  "mean_gnnexplainer_time_sec_per_seed": 0.389,
+  "mean_extract_time_ms": 4.89,
+  "mean_random_30_time_ms": 137.3,
+  "mean_occlusion_time_ms": 77.04,
+  "max_peak_rss_mb": 2018.97,
+  "max_peak_vram_mb": 737.28,
+  "notes": "Technical pilot benchmark executed on 4 development period nodes (steps 33-36). Not a matched-pair effect-variance pilot."
+}

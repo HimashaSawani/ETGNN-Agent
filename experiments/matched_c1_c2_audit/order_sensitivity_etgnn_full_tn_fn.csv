@@ -1,0 +1,6 @@
+order_method,n_pairs,mean_distance,post_smd_margin,post_smd_edges
+optimal,26,0.04,0.017,0.024
+margin_asc,26,0.041,0.018,0.014
+margin_desc,26,0.04,0.017,0.024
+edges_asc,26,0.041,0.018,0.014
+random,26,0.04,0.017,0.024

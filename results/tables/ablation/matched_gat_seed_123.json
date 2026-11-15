@@ -1,0 +1,6 @@
+{
+  "model": "matched_gat",
+  "seed": 123,
+  "best_epoch": 2,
+  "validation_auprc": 0.3934429356766975
+}

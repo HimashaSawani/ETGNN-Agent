@@ -1,0 +1,9 @@
+register,pairs_count,mean_diff,bootstrap_se,ci_95_low,ci_95_high,graph_dependence_limitation
+ETGNN Primary TP-FP,95,0.039343190309019734,0.009584780346845933,0.020234097637910103,0.057410096375904794,Transactions reside in connected graph; pairs assume independent cluster resampling.
+ETGNN Primary TN-FN,25,-0.05802690867582957,0.034397922590540135,-0.12883095848063628,0.006393128497401846,Transactions reside in connected graph; pairs assume independent cluster resampling.
+Matched GAT Primary TP-FP,94,0.020315191804865074,0.008923391535144523,0.003917495516650642,0.03868397231099692,Transactions reside in connected graph; pairs assume independent cluster resampling.
+Matched GAT Primary TN-FN,21,0.05225512342719688,0.05151712378093944,-0.04615270855064162,0.1624597022818431,Transactions reside in connected graph; pairs assume independent cluster resampling.
+ETGNN Degree-Sensitivity TP-FP,57,0.04345522015764003,0.012657585926297982,0.019881581634021647,0.06955166076968984,Transactions reside in connected graph; pairs assume independent cluster resampling.
+ETGNN Degree-Sensitivity TN-FN,25,-0.019747939815123877,0.02974959123092099,-0.08159265899086991,0.036311886398245875,Transactions reside in connected graph; pairs assume independent cluster resampling.
+Matched GAT Degree-Sensitivity TP-FP,82,0.01054734507974521,0.011610281750261827,-0.013240245880308478,0.03277043157891105,Transactions reside in connected graph; pairs assume independent cluster resampling.
+Matched GAT Degree-Sensitivity TN-FN,21,0.07248878635037392,0.05188144360630652,-0.024721022809574764,0.17858714291291855,Transactions reside in connected graph; pairs assume independent cluster resampling.

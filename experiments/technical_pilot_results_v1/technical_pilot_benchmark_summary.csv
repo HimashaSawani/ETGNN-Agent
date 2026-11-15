@@ -1,0 +1,5 @@
+node_index,transaction_id,category,time_step,E_cand,k_budget,actual_k_over_E,extract_runtime_ms,gnnexplainer_mean_runtime_ms,random_30_total_runtime_ms,degree_ranking_runtime_ms,occlusion_runtime_ms,peak_rss_mb,peak_vram_mb,c1_target_class,mean_ge_drop_etgnn,mean_ge_drop_gat,mean_rnd_drop_etgnn,mean_rnd_drop_gat,advantage_A_etgnn,advantage_A_gat
+131350,93564753,TP,33,2,1,0.5,4.51,327.39,127.78,9.47,8.85,2018.57,737.28,1,-0.0275,-0.0291,-0.0407,-0.0473,0.0132,0.0182
+130659,92512070,FP,33,118,30,0.2542,4.94,533.3,142.67,5.06,271.45,2018.9,737.28,1,0.613,0.0668,0.0314,-0.0347,0.5816,0.1014
+134593,288474786,FN,34,2,1,0.5,5.04,335.6,145.23,5.14,8.89,2018.93,737.28,0,0.2654,0.1569,0.161,0.0911,0.1044,0.0658
+130674,92724813,TN,33,6,2,0.3333,5.07,359.57,133.53,6.78,18.97,2018.97,737.28,0,0.085,0.0592,0.0303,0.0117,0.0547,0.0474
